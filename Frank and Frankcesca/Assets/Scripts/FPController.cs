@@ -11,7 +11,6 @@ public class FPController : MonoBehaviour
     public Transform cameraTransform;
     public float lookSensitivity = 2f;
     public float verticalLookLimit = 90f;
-    public float horizontalLookLimit = 360f;
 
     [Header("Shooting")]
     public GameObject bulletPrefab;
