@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+//Akhona Khoali
+//Script from lecture
 public class FPController : MonoBehaviour
 {
     [Header("Movement Settings")]

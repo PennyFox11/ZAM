@@ -1,4 +1,7 @@
 using UnityEngine;
+//Akhona Khoali
+//Old script from class but I'm scared of deleting it so I will keep it here for now.
+//I didnt wire the controls so it doesnt affect my other scripts. I will delete it later if I dont need it.
 
 public class PickUpObject : MonoBehaviour
 {
