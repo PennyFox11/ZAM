@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Video;
+//Akhona Khoali
+//https://youtu.be/he7xfXwFhk4?si=ODY6Wakjdee-KgKX
+//https://docs.unity3d.com/Manual/Video.html
+//https://docs.unity.cn/Manual/VideoPlayer-intro.html
+//https://medium.com/@matthias.zarzecki/how-to-use-the-video-player-in-unity-8d6b60027a68
 
-// Put this on your UI manager object (an active object, NOT the cutscene panel).
-// Plays a video full screen. It freezes the player while it plays (like the dialogue and the
-// computer), lets the player press E to skip, and fades out at the end.
-// The intro plays by itself when the game starts. Other scripts can play more cutscenes with:
-//   CutscenePlayer.Instance.Play(someVideoClip);
-// It adds its own VideoPlayer and Audio Sources, so you only set up the UI.
+//Belongs to the camvas
+
 public class CutscenePlayer : MonoBehaviour, IInteractionScreen
 {
     public static CutscenePlayer Instance { get; private set; }
@@ -72,7 +73,7 @@ public class CutscenePlayer : MonoBehaviour, IInteractionScreen
             panelGroup = cutscenePanel.AddComponent<CanvasGroup>();
         }
 
-        // A RawImage with no picture draws white, so keep it hidden until the video is ready.
+        // A RawImage with no picture draws white, to keep it hidden until the video is ready.
         screenImage.gameObject.SetActive(false);
 
         if (skipHint != null)
@@ -95,7 +96,7 @@ public class CutscenePlayer : MonoBehaviour, IInteractionScreen
         }
     }
 
-    // ----- Playing -----
+    // Playing
 
     public void Play(VideoClip clip)
     {
@@ -185,7 +186,7 @@ public class CutscenePlayer : MonoBehaviour, IInteractionScreen
         EndCutscene();
     }
 
-    // E skips the cutscene (after a short lock, so it isn't skipped by accident).
+    // E skips the cutscene 
     public void OnInteractPressed()
     {
         if (!isPlaying || !allowSkip) return;
@@ -204,7 +205,7 @@ public class CutscenePlayer : MonoBehaviour, IInteractionScreen
         }
     }
 
-    // ----- Ending -----
+    // Ending
 
     private void EndCutscene()
     {
@@ -254,7 +255,7 @@ public class CutscenePlayer : MonoBehaviour, IInteractionScreen
         isPlaying = false;
         isEnding = false;
 
-        // Give the player control back.
+       
         if (interactor != null)
         {
             interactor.UnlockPlayer();
