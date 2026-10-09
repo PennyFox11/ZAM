@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightGlowMaterial 1
+  m_Name: LightGlowMaterial 4
   m_Shader: {fileID: -6465566751694194690, guid: af604ec46aa9c4f49b1d4afa01359b77, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -100,7 +100,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GlowStrength: 16
+    - _GlowStrength: 12.89
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -121,8 +121,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColour: {r: 0.44199193, g: 0.77463526, b: 0.9308176, a: 0.7254902}
-    - _NeonColour: {r: 0.60062885, g: 0.9800315, b: 1, a: 1}
+    - _EmissionColour: {r: 0.35888252, g: 0.103714176, b: 0.57861626, a: 1}
+    - _NeonColour: {r: 0.79901713, g: 0.48678842, b: 0.9496855, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
