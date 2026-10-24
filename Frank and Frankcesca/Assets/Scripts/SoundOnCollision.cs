@@ -12,7 +12,8 @@ public class SoundOnCollision : MonoBehaviour
     {
         myAudioSource.PlayOneShot(myAudioClip);
     }
-    // will play the assigned audio using the audio source assigned in the inspector
+        
+    // will play the audio clip assigned in the inspector
 
     
 }
