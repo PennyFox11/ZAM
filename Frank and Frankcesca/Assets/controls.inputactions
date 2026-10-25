@@ -59,6 +59,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "e75fdedc-d738-4d54-9802-c81ecda671e5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Report",
+                    "type": "Button",
+                    "id": "fcb8e0ca-d8c6-4a30-873f-98ce094747a4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -312,6 +330,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Notebook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cf527b11-b1ce-4494-8a7b-2ade96ae557b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d434c7c-e52d-4b65-9b5a-f822e129aaa2",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Report",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

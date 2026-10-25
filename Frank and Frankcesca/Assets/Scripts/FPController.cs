@@ -14,6 +14,15 @@ public class FPController : MonoBehaviour
     public float lookSensitivity = 2f;
     public float verticalLookLimit = 90f;
 
+    [Header("Zoom Settings")]
+    public Camera playerCamera;          // Optional: if left empty, it is taken from cameraTransform.
+    public float defaultFOV = 60f;       // Should match the FOV on your camera.
+    public float minFOV = 20f;           // Most zoomed in.
+    public float maxFOV = 70f;           // Most zoomed out.
+    public float zoomSpeed = 5f;         // How much each scroll tick changes the FOV.
+    public float zoomSmoothing = 10f;    // Higher = snappier.
+    private float targetFOV;
+
     [Header("Shooting")]
     public GameObject bulletPrefab;
     public Transform gunPoint;
@@ -35,6 +44,7 @@ public class FPController : MonoBehaviour
     public float throwUpwardBoost = 1f;
 
     private CharacterController controller;
+    private PlayerInteractor interactor;   // So HandleLook can tell when the player is dragging to rotate a held item.
     private Vector2 moveInput;
     private Vector2 lookInput;
     private Vector3 velocity;     // Stores the player's current vertical movement, including gravity.
@@ -44,7 +54,16 @@ public class FPController : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        interactor = GetComponent<PlayerInteractor>();
         originalMoveSpeed = moveSpeed;
+
+        if (playerCamera == null)
+        {
+            playerCamera = cameraTransform.GetComponent<Camera>();
+        }
+
+        targetFOV = defaultFOV;
+        playerCamera.fieldOfView = defaultFOV;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -53,6 +72,7 @@ public class FPController : MonoBehaviour
     {
         HandleMovement();
         HandleLook();
+        HandleZoom();
 
         if (heldObject != null)
         {
@@ -102,6 +122,13 @@ public class FPController : MonoBehaviour
     // Handles the player's camera and body rotation.
     public void HandleLook()
     {
+        // While the player is holding an item and dragging with the left mouse button to rotate
+        // it, that same mouse movement should spin the item, not the camera.
+        if (interactor != null && interactor.IsHolding && Mouse.current != null && Mouse.current.leftButton.isPressed)
+        {
+            return;
+        }
+
         // Calculates horizontal camera movement using the look input
         // and the selected sensitivity.
         float mouseX = lookInput.x * lookSensitivity;
@@ -128,6 +155,29 @@ public class FPController : MonoBehaviour
 
         // Rotates the entire player GameObject left and right.
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    // Zooms the camera in and out using the mouse scroll wheel by changing the field of view.
+    private void HandleZoom()
+    {
+        if (Mouse.current == null) return;
+
+        // The scroll value is usually +120 / -120 per tick, so it is normalised to +1 / -1.
+        float scroll = Mouse.current.scroll.ReadValue().y / 120f;
+
+        if (scroll != 0f)
+        {
+            // Scrolling up zooms in (smaller FOV), scrolling down zooms out.
+            targetFOV -= scroll * zoomSpeed;
+            targetFOV = Mathf.Clamp(targetFOV, minFOV, maxFOV);
+        }
+
+        // Smoothly moves the camera toward the target FOV.
+        playerCamera.fieldOfView = Mathf.Lerp(
+            playerCamera.fieldOfView,
+            targetFOV,
+            zoomSmoothing * Time.deltaTime
+        );
     }
 
     public void OnJump(InputAction.CallbackContext context)
