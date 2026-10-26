@@ -1627,10 +1627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1650,7 +1650,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1720,12 +1720,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4a0ba6869258d48a9c9888612c24c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuAudio
-  musicClip: {fileID: 8300000, guid: 64025245cd7778a42b25379cf9ca3984, type: 3}
+  musicClip: {fileID: 8300000, guid: 382e6ad6e8069a248ac61c0b614c245d, type: 3}
   musicVolume: 0.5
   musicFadeInSeconds: 2
-  hoverClip: {fileID: 0}
-  clickClip: {fileID: 0}
-  sfxVolume: 0.974
+  hoverClip: {fileID: 8300000, guid: 0ee825255b1b65e419f32f381db33a36, type: 3}
+  clickClip: {fileID: 8300000, guid: 186bbd757a0f3ab478faa1275c37a3ac, type: 3}
+  sfxVolume: 0.465
 --- !u!1 &512183502
 GameObject:
   m_ObjectHideFlags: 0
