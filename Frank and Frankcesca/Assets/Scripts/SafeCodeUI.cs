@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 //Akhona Khoali
 
-//  UI manager object
+// Belongs to canvases that show a keypad for entering a code. The code is set in the Inspector on the SafeInteractable
 // The player types the code with the number keys (top row or numpad).
 // Backspace deletes a digit, E leaves the keypad.
+// The safe uses Open(safe, interactor). A code-locked computer (or anything else) can use
+// OpenForCode(...) to show this same keypad and run something when the code is right.
 public class SafeCodeUI : MonoBehaviour, IInteractionScreen
 {
     public static SafeCodeUI Instance { get; private set; }
@@ -14,7 +16,7 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
     [Header("UI References")]
     public GameObject safePanel;
     public TMP_Text promptText;         // "Enter code"
-    public TMP_Text codeText;           // "1 _ _"
+    public TMP_Text codeText;           // "1 2 _ _"
     public TMP_Text feedbackText;       // "CORRECT" or "WRONG"
 
     [Header("Colours")]
@@ -30,7 +32,8 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
     [Header("Timing")]
     public float feedbackTime = 1.2f;   // How long CORRECT / WRONG stays on screen.
 
-    private SafeInteractable currentSafe;
+    private string currentCode = "";
+    private System.Action onCorrect;
     private PlayerInteractor currentInteractor;
     private string enteredCode = "";
     private bool acceptingInput;
@@ -46,14 +49,26 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
         StopListening();
     }
 
+    // The safe: the right code unlocks it and opens it.
     public void Open(SafeInteractable safe, PlayerInteractor interactor)
     {
-        currentSafe = safe;
+        OpenForCode(safe.code, interactor, () =>
+        {
+            safe.Unlock();
+            safe.Open();
+        });
+    }
+
+    // Shows the keypad for any code. onCorrectCode runs after the keypad has closed.
+    public void OpenForCode(string code, PlayerInteractor interactor, System.Action onCorrectCode, string prompt = "Enter code")
+    {
+        currentCode = code;
+        onCorrect = onCorrectCode;
         currentInteractor = interactor;
         enteredCode = "";
 
         safePanel.SetActive(true);
-        promptText.text = "Enter code";
+        promptText.text = prompt;
         feedbackText.text = "";
         UpdateCodeDisplay();
 
@@ -97,14 +112,14 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
         // Ignore letters and symbols (this also ignores the E used to leave).
         if (!char.IsDigit(character)) return;
 
-        if (enteredCode.Length >= currentSafe.code.Length) return;
+        if (enteredCode.Length >= currentCode.Length) return;
 
         enteredCode += character;
         PlaySound(keyClip);
         UpdateCodeDisplay();
 
         // All digits typed: check the code.
-        if (enteredCode.Length == currentSafe.code.Length)
+        if (enteredCode.Length == currentCode.Length)
         {
             StartCoroutine(CheckCode());
         }
@@ -114,7 +129,7 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
     {
         acceptingInput = false;
 
-        if (enteredCode == currentSafe.code)
+        if (enteredCode == currentCode)
         {
             // Correct code.
             feedbackText.text = "CORRECT";
@@ -123,14 +138,17 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
 
             yield return new WaitForSeconds(feedbackTime);
 
-            SafeInteractable safe = currentSafe;
+            System.Action whenCorrect = onCorrect;
             Close();
-            safe.Unlock();
-            safe.Open();
+
+            if (whenCorrect != null)
+            {
+                whenCorrect();
+            }
         }
         else
         {
-            // Wrong code: the opposite happens. The safe stays locked.
+            // Wrong code: the opposite happens. It stays locked.
             feedbackText.text = "WRONG";
             feedbackText.color = wrongColour;
             PlaySound(wrongClip);
@@ -164,7 +182,7 @@ public class SafeCodeUI : MonoBehaviour, IInteractionScreen
     // Builds text like "1 2 _ _" from what has been typed so far.
     private void UpdateCodeDisplay()
     {
-        int length = currentSafe.code.Length;
+        int length = currentCode.Length;
         string display = "";
 
         for (int i = 0; i < length; i++)

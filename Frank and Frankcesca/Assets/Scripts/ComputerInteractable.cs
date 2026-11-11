@@ -1,10 +1,8 @@
 using System;
 using UnityEngine;
 //Akhona Khoali
-//This script is attached to each computer in the game. It contains the data for the computer's database, including categories and entries. 
-//The ComputerDatabaseUI script uses this data to display the database UI when the player interacts with the computer.
 
-// One item inside a category and is customisable 
+// One item inside a category. Fill in whichever parts you need:
 //   Case file / report / newspaper article -> title + image
 //   Audio recording                        -> title + audio
 //   Employee information                   -> title + text
@@ -16,6 +14,9 @@ public class DatabaseEntry
     public AudioClip audio;
     [TextArea(3, 8)]
     public string text;
+
+    [Tooltip("Optional. Matches a Clue Id in the EvidenceNotebook - reported the moment the player opens this entry.")]
+    public string clueId = "";
 }
 
 // One button on the computer's home screen, e.g. "Case Files" or "Audio Files".
@@ -27,7 +28,7 @@ public class DatabaseCategory
     public DatabaseEntry[] entries;
 }
 
-// Put this on each computer 
+// Put this on each computer (with a Collider). Every computer has its own categories,
 // so all three computers use this same script with different Inspector data.
 public class ComputerInteractable : MonoBehaviour, IInteractable
 {
@@ -41,17 +42,54 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
                                         // Leave empty to use the default lines from the Database UI.
                                         // {computer} is replaced with the computer name.
 
+    [Header("Code Lock (optional - tick for the one computer that needs a code)")]
+    public bool requiresCode = false;
+    public string code = "1234";            // Digits only. The length sets how many digits the player types.
+    public string lockedPrompt = "Enter password";
+    public string unlockedChecklistId = "";     // Optional. Ticks this checklist task when the right code is typed.
+
+    // Becomes true once the right code has been typed, so it only asks the first time.
+    private bool codeAccepted;
+
+    private bool IsCodeLocked
+    {
+        get { return requiresCode && !codeAccepted; }
+    }
+
     public string GetPrompt()
     {
-        return "Use " + computerName;
+        return IsCodeLocked ? lockedPrompt : "Use " + computerName;
     }
 
     public void Interact(PlayerInteractor interactor)
     {
-        if (ComputerDatabaseUI.Instance != null)
+        if (ComputerDatabaseUI.Instance == null) return;
+
+        if (IsCodeLocked)
         {
-            ComputerDatabaseUI.Instance.Open(this, interactor);
+            if (SafeCodeUI.Instance == null)
+            {
+                Debug.LogWarning(name + ": there is no SafeCodeUI in the scene, so the code screen can't open.");
+                return;
+            }
+
+            // Reuses the safe's keypad. The right code opens the computer straight away.
+            SafeCodeUI.Instance.OpenForCode(code, interactor, () =>
+            {
+                codeAccepted = true;
+
+                if (!string.IsNullOrEmpty(unlockedChecklistId))
+                {
+                    ClueTrigger.DiscoverClue(unlockedChecklistId);
+                }
+
+                ComputerDatabaseUI.Instance.Open(this, interactor);
+            }, "Enter password");
+
+            return;
         }
+
+        ComputerDatabaseUI.Instance.Open(this, interactor);
     }
 
     // Unlocks a hidden category by name. Returns true only the first time.

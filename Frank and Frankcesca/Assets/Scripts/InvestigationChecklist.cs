@@ -1,252 +1,311 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 //Akhona Khoali
 
-//This script is for the investigation checklist that shows the player what clues they have found and what they still need to find.
-
-//It also unlocks the entrance door when all clues are found.
-
+// One line of an act's mission list. Filled  in the InvestigationChecklist in the Inspector.
 [Serializable]
 public class ChecklistItem
 {
-    public string clueId;           // Must match the Clue Id on the ClueTrigger of the clue, e.g. "usb_stick".
+    public string clueId;           // The id that ticks this line, e.g. "usb_stick". See ClueTrigger / the notes below.
     public string label;            // What the player reads, e.g. "Find the USB stick".
-    public TMP_Text lineText;       // The text line inside the checklist panel that shows this item.
 
+    [NonSerialized]
+    public TMP_Text lineText;       // Made for you at runtime.
     [NonSerialized]
     public bool isDone;
 }
 
-// Under canvas 
-// The checklist panel stays hidden, then:
-//   - flickers slowly on screen for a few seconds, every 30 seconds, until it is complete
-//   - pops up straight away when the player finds one of its clues, and ticks that line
-//     while the player is watching
-// When every line is ticked it shows "Investigation complete" and unlocks the entrance door.
-// Clues report to this through ClueTrigger, so nothing else needs wiring.
+// One act: a title and the lines the player has to tick off before the next act starts.
+[Serializable]
+public class ChecklistAct
+{
+    public string actTitle = "Act 1";
+    public ChecklistItem[] items;
+
+    [Header("When this act is finished (all optional)")]
+    [TextArea(1, 2)]
+    public string completeMessage = "";                 // Shown briefly, e.g. "Act 1 complete".
+    public TeleportDoorInteractable doorToUnlock;       // Unlocked the moment this act is finished.
+    public UnityEvent onActComplete;                    // Anything else that should happen.
+}
+
+// Belongs on the canvas. Shows the player's current investigation objectives and ticks them off as they are completed.
+// A chain of acts that works as the player's mission list:
+//   - only ONE act is on screen at a time. Once every line of it is ticked, the next act appears.
+//   - lines can be ticked in any order, and a line ticked early (before its act starts) is already
+//     ticked when its act arrives.
+//   - the panel stays on screen while the player walks around, and fades away while a screen is
+//     open (the computer, the notebook, the pause menu, the report...). It stays during dialogue.
+//
+// What ticks a line? Anything that reports its Clue Id, which is the same id used everywhere else:
+//   a pickup / scanner fingerprint -> ClueTrigger on it with that id
+//   a dialogue line                -> the line's "Clue Id" field
+//   a computer entry               -> the entry's "Clue Id" field
+//   the report finished / a computer unlocked by code / a door used / the interrogation over
+//                                  -> the "Checklist Id" field on that object
+// The id does NOT have to be a clue in the EvidenceNotebook.
 public class InvestigationChecklist : MonoBehaviour
 {
     public static InvestigationChecklist Instance { get; private set; }
 
-    [Header("Items (the clues that unlock the door)")]
-    public ChecklistItem[] items;
+    [Header("The Acts (in order)")]
+    public ChecklistAct[] acts;
 
     [Header("Checklist Panel")]
-    public GameObject checklistPanel;       // Holds the title and the item lines. Starts hidden.
-    public TMP_Text completeText;           // Optional. Inside the panel, shown when everything is done.
-    [TextArea]
-    public string completeMessage = "Investigation complete. The entrance is open.";
+    public GameObject checklistPanel;       // Holds the title and the lines. Keep it ACTIVE in the Hierarchy.
+    public TMP_Text actTitleText;           // e.g. "ACT 1".
+    public Transform lineContainer;         // Inside the panel. Give it a Vertical Layout Group.
+    public TMP_Text linePrefab;             // One line of text. Can be a prefab, or a template text inside the container.
+    public string finishedTitle = "All objectives complete";
+    public float finishedShowSeconds = 5f;  // How long that stays before the panel goes away for good.
 
-    [Header("When It Appears On Its Own")]
-    public float firstShowDelay = 5f;       // Seconds after the game starts.
-    public float showEverySeconds = 30f;    // Then again every 30 seconds.
-    public float showForSeconds = 5f;       // Stays for 5 seconds each time.
-    public float flickerSpeed = 1f;         // Lower = slower flicker.
-    [Range(0f, 1f)]
-    public float flickerMinAlpha = 0.4f;    // How faint it gets at the dimmest point.
+    [Header("Visibility")]
+    public bool showDuringDialogue = true;  // Stays on screen while talking to someone.
+    public float fadeSpeed = 6f;            // Higher = fades in and out faster.
 
-    [Header("When a Clue Is Found")]
-    public float markDelay = 0.8f;          // Pause before the line is ticked, so the player sees it happen.
-    public float afterMarkSeconds = 3f;     // How long the list stays after a tick.
-    public float completeShowSeconds = 5f;  // How long it stays once everything is done.
+    [Header("Ticking")]
+    public float markDelay = 0.6f;          // Pause before the next act appears, so the last tick is seen.
+    public float actCompleteSeconds = 2f;   // How long a finished act stays on screen before the next one.
     public Color todoColour = Color.white;
     public Color doneColour = new Color(0.4f, 1f, 0.4f, 1f);
 
-    [Header("Door")]
-    public TeleportDoorInteractable entranceDoor;   // Unlocked when everything is done.
-    public UnityEvent onComplete;                   // Anything else that should happen at the end.
-
     [Header("Sounds (all optional)")]
     public AudioClip tickClip;
-    public AudioClip completeClip;
+    public AudioClip actCompleteClip;
+    public AudioClip allCompleteClip;
+
+    // Every id that has been reported so far, so lines for later acts can be ticked early.
+    private HashSet<string> doneIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
     private CanvasGroup panelGroup;
     private AudioSource sfxAudioSource;
-    private Coroutine displayRoutine;
-    private Coroutine periodicRoutine;
-    private bool isComplete;
+    private PlayerInteractor interactor;
+    private int currentAct = -1;
+    private bool advancing;
+    private bool finished;
+    private bool finishedHidden;
+
+    public bool IsComplete
+    {
+        get { return finished; }
+    }
+
+    public int CurrentActIndex
+    {
+        get { return currentAct; }
+    }
 
     private void Awake()
     {
         Instance = this;
 
-        // The flicker fades a CanvasGroup, so add one if the panel doesn't have it.
         panelGroup = checklistPanel.GetComponent<CanvasGroup>();
         if (panelGroup == null)
         {
             panelGroup = checklistPanel.AddComponent<CanvasGroup>();
         }
 
-        checklistPanel.SetActive(false);
+        // Starts invisible and fades in once the game is being played. It must never catch clicks.
+        panelGroup.alpha = 0f;
+        panelGroup.blocksRaycasts = false;
+        panelGroup.interactable = false;
 
-        if (completeText != null)
+        if (linePrefab != null && linePrefab.gameObject.scene.IsValid())
         {
-            completeText.gameObject.SetActive(false);
+            // A template text placed in the scene is only a model for the real lines.
+            linePrefab.gameObject.SetActive(false);
         }
 
         sfxAudioSource = gameObject.AddComponent<AudioSource>();
         sfxAudioSource.playOnAwake = false;
         sfxAudioSource.pitch = 1f;
 
-        foreach (ChecklistItem item in items)
-        {
-            ApplyLine(item);
-        }
+        interactor = FindFirstObjectByType<PlayerInteractor>();
     }
 
     private void Start()
     {
-        periodicRoutine = StartCoroutine(PeriodicRoutine(firstShowDelay));
+        if (acts == null || acts.Length == 0)
+        {
+            Debug.LogWarning("InvestigationChecklist: the Acts list is empty, so there is nothing to show.");
+            return;
+        }
+
+        ShowAct(0);
     }
 
-    //Called by ClueTrigger when the player finds a clue 
-
-    public void CompleteItem(string clueId)
+    // Fades the whole panel in while the player is walking around, out while a screen is open.
+    private void Update()
     {
-        if (isComplete) return;
+        bool show = !finishedHidden && acts != null && acts.Length > 0 && CanShowNow();
 
-        ChecklistItem item = FindItem(clueId);
-
-        // Most clues are not on the checklist, so quietly ignore those.
-        if (item == null || item.isDone) return;
-
-        item.isDone = true;
-        StartCoroutine(MarkRoutine(item));
+        panelGroup.alpha = Mathf.MoveTowards(panelGroup.alpha, show ? 1f : 0f, fadeSpeed * Time.unscaledDeltaTime);
     }
 
-    public bool IsComplete
+    private bool CanShowNow()
     {
-        get { return isComplete; }
+        if (interactor == null || !interactor.InputLocked) return true;
+
+        // A screen is open. Only a dialogue is allowed to keep the list on screen.
+        if (showDuringDialogue && DialogueUI.Instance != null && DialogueUI.Instance.dialoguePanel != null)
+        {
+            return DialogueUI.Instance.dialoguePanel.activeSelf;
+        }
+
+        return false;
     }
 
-    private IEnumerator MarkRoutine(ChecklistItem item)
+    //  Called by ClueTrigger (and the Checklist Id fields) when something is done 
+
+    public void CompleteItem(string id)
     {
-        // Pop the list up straight away, steady so it is easy to read.
-        ShowPanel(markDelay + afterMarkSeconds, false);
+        if (string.IsNullOrEmpty(id)) return;
 
-        // A short pause so the player sees the tick happen.
-        yield return new WaitForSeconds(markDelay);
+        id = id.Trim();
 
-        ApplyLine(item);
-        PlaySound(tickClip);
-        yield return Punch(item.lineText);
+        // Already reported. Everything is remembered, so a repeat does nothing.
+        if (!doneIds.Add(id)) return;
 
-        if (AllDone())
+        if (finished || advancing || currentAct < 0) return;
+
+        ChecklistAct act = acts[currentAct];
+        bool ticked = false;
+
+        foreach (ChecklistItem item in act.items)
         {
-            FinishInvestigation();
-        }
-        else
-        {
-            // The 30 second timer starts again from this moment.
-            RestartTimer();
-        }
-    }
-
-    private void FinishInvestigation()
-    {
-        if (isComplete) return;
-
-        isComplete = true;
-
-        if (periodicRoutine != null)
-        {
-            StopCoroutine(periodicRoutine);
-            periodicRoutine = null;
-        }
-
-        PlaySound(completeClip);
-
-        // "Investigation complete" shows inside the checklist, or through MessageUI if there is no text for it.
-        if (completeText != null)
-        {
-            completeText.text = completeMessage;
-            completeText.gameObject.SetActive(true);
-        }
-        else if (MessageUI.Instance != null)
-        {
-            MessageUI.Instance.Show(completeMessage, 4f);
-        }
-
-        ShowPanel(completeShowSeconds, false);
-
-        if (entranceDoor != null)
-        {
-            entranceDoor.Unlock();
-        }
-        else
-        {
-            Debug.LogWarning("InvestigationChecklist: the Entrance Door slot is empty, so no door was unlocked.");
-        }
-
-        onComplete.Invoke();
-    }
-
-    //Showing and hiding the panel 
-
-    // Every 30 seconds (unless a clue popped it up recently) the list flickers on screen for a few seconds.
-    private IEnumerator PeriodicRoutine(float firstWait)
-    {
-        yield return new WaitForSeconds(firstWait);
-
-        while (!isComplete)
-        {
-            // Skip this one if the panel is already showing because of a clue.
-            if (displayRoutine == null)
+            if (!item.isDone && SameId(item.clueId, id))
             {
-                ShowPanel(showForSeconds, true);
+                item.isDone = true;
+                ApplyLine(item);
+                StartCoroutine(Punch(item.lineText));
+                ticked = true;
             }
-
-            yield return new WaitForSeconds(showEverySeconds);
-        }
-    }
-
-    private void RestartTimer()
-    {
-        if (periodicRoutine != null)
-        {
-            StopCoroutine(periodicRoutine);
         }
 
-        periodicRoutine = StartCoroutine(PeriodicRoutine(showEverySeconds));
-    }
-
-    private void ShowPanel(float duration, bool flicker)
-    {
-        if (displayRoutine != null)
+        if (ticked)
         {
-            StopCoroutine(displayRoutine);
-        }
+            PlaySound(tickClip);
 
-        displayRoutine = StartCoroutine(DisplayRoutine(duration, flicker));
-    }
-
-    private IEnumerator DisplayRoutine(float duration, bool flicker)
-    {
-        checklistPanel.SetActive(true);
-
-        float endTime = Time.time + duration;
-
-        while (Time.time < endTime)
-        {
-            if (flicker)
+            if (AllDone(act))
             {
-                // Slowly rises and falls between the faint level and fully visible.
-                float wave = Mathf.PingPong(Time.time * flickerSpeed, 1f);
-                panelGroup.alpha = Mathf.Lerp(flickerMinAlpha, 1f, wave);
+                StartCoroutine(AdvanceRoutine(false));
             }
-            else
-            {
-                panelGroup.alpha = 1f;
-            }
+        }
+    }
 
+    //  Showing an act 
+
+    private void ShowAct(int index)
+    {
+        currentAct = index;
+        ChecklistAct act = acts[index];
+
+        if (actTitleText != null)
+        {
+            actTitleText.text = act.actTitle;
+        }
+
+        ClearLines();
+
+        foreach (ChecklistItem item in act.items)
+        {
+            // Anything reported before this act started is already ticked.
+            item.isDone = !string.IsNullOrEmpty(item.clueId) && doneIds.Contains(item.clueId.Trim());
+
+            TMP_Text line = Instantiate(linePrefab, lineContainer);
+            line.gameObject.SetActive(true);
+            item.lineText = line;
+
+            ApplyLine(item);
+        }
+
+        // Everything was already done early: move straight on.
+        if (AllDone(act))
+        {
+            StartCoroutine(AdvanceRoutine(true));
+        }
+    }
+
+    private void ClearLines()
+    {
+        foreach (Transform child in lineContainer)
+        {
+            // Keep the template text (if there is one inside the container).
+            if (linePrefab != null && child.gameObject == linePrefab.gameObject) continue;
+
+            child.gameObject.SetActive(false);
+            Destroy(child.gameObject);
+        }
+    }
+
+    //  Finishing an act 
+
+    private IEnumerator AdvanceRoutine(bool quick)
+    {
+        advancing = true;
+
+        // Don't move on while the player can't see the list (they're in the computer, say).
+        // The next act appears the moment they are back to walking around.
+        while (panelGroup.alpha < 0.9f)
+        {
             yield return null;
         }
 
-        checklistPanel.SetActive(false);
-        displayRoutine = null;
+        yield return new WaitForSeconds(quick ? 0.3f : markDelay);
+
+        ChecklistAct act = acts[currentAct];
+
+        PlaySound(actCompleteClip);
+
+        if (!string.IsNullOrEmpty(act.completeMessage) && MessageUI.Instance != null)
+        {
+            MessageUI.Instance.Show(act.completeMessage, 3f);
+        }
+
+        if (act.doorToUnlock != null)
+        {
+            act.doorToUnlock.Unlock();
+        }
+
+        if (act.onActComplete != null)
+        {
+            act.onActComplete.Invoke();
+        }
+
+        yield return new WaitForSeconds(actCompleteSeconds);
+
+        advancing = false;
+
+        if (currentAct + 1 < acts.Length)
+        {
+            ShowAct(currentAct + 1);
+        }
+        else
+        {
+            StartCoroutine(FinishRoutine());
+        }
+    }
+
+    private IEnumerator FinishRoutine()
+    {
+        finished = true;
+
+        PlaySound(allCompleteClip);
+
+        if (actTitleText != null)
+        {
+            actTitleText.text = finishedTitle;
+        }
+
+        ClearLines();
+
+        yield return new WaitForSeconds(finishedShowSeconds);
+
+        finishedHidden = true;
     }
 
     // Lines 
@@ -278,7 +337,7 @@ public class InvestigationChecklist : MonoBehaviour
         float duration = 0.3f;
         float time = 0f;
 
-        while (time < duration)
+        while (time < duration && target != null)
         {
             time += Time.deltaTime;
             float bump = Mathf.Sin(time / duration * Mathf.PI) * 0.25f;
@@ -286,12 +345,15 @@ public class InvestigationChecklist : MonoBehaviour
             yield return null;
         }
 
-        target.localScale = originalScale;
+        if (target != null)
+        {
+            target.localScale = originalScale;
+        }
     }
 
-    private bool AllDone()
+    private bool AllDone(ChecklistAct act)
     {
-        foreach (ChecklistItem item in items)
+        foreach (ChecklistItem item in act.items)
         {
             if (!item.isDone) return false;
         }
@@ -300,21 +362,9 @@ public class InvestigationChecklist : MonoBehaviour
     }
 
     // Matches ignoring capital letters and spaces at the ends.
-    private ChecklistItem FindItem(string clueId)
+    private bool SameId(string a, string b)
     {
-        if (clueId == null) return null;
-
-        string wanted = clueId.Trim();
-
-        foreach (ChecklistItem item in items)
-        {
-            if (item.clueId != null && item.clueId.Trim().Equals(wanted, StringComparison.OrdinalIgnoreCase))
-            {
-                return item;
-            }
-        }
-
-        return null;
+        return a != null && a.Trim().Equals(b.Trim(), StringComparison.OrdinalIgnoreCase);
     }
 
     private void PlaySound(AudioClip clip)

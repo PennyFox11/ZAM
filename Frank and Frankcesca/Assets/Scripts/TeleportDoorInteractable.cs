@@ -1,16 +1,16 @@
 using System.Collections;
 using UnityEngine;
-//AKhona Khoali
+//Akhona Khoali
 
 // Anything that can be used while the player is carrying an item implements this.
 // Normally E drops the held item. PlayerInteractor checks this first, so E can use
-// a door while the player holds the USB. (You can move this into your interfaces file.)
+// a door while the player holds the USB. 
 public interface IUsableWhileHolding
 {
     bool UsableWhileHolding { get; }
 }
 
-// The apartment entrance door. 
+// The apartment entrance door. Put this on the door object (with a Collider).
 // Like every other interactable it implements IInteractable, so PlayerInteractor shows its
 // prompt and calls Interact() when E is pressed.
 //   Locked   -> E shows the locked message.
@@ -37,6 +37,9 @@ public class TeleportDoorInteractable : MonoBehaviour, IInteractable, IInteracti
     public CanvasGroup fadePanel;           // Optional: a full-screen black Image with a Canvas Group.
     public float fadeTime = 0.5f;
 
+    [Header("Checklist (optional)")]
+    public string checklistId = "";         // Ticks this line on the InvestigationChecklist when the player goes through.
+
     [Header("Audio (all optional)")]
     public AudioClip lockedClip;            // Rattle when the player tries the locked door.
     public AudioClip unlockedClip;          // When the checklist unlocks it.
@@ -57,14 +60,14 @@ public class TeleportDoorInteractable : MonoBehaviour, IInteractable, IInteracti
         }
     }
 
-    //IUsableWhileHolding 
+    // IUsableWhileHolding 
 
     public bool UsableWhileHolding
     {
         get { return usableWhileHolding; }
     }
 
-    // IInteractabl
+    // IInteractable 
 
     public string GetPrompt()
     {
@@ -131,10 +134,15 @@ public class TeleportDoorInteractable : MonoBehaviour, IInteractable, IInteracti
         isLocked = true;
     }
 
-    //Teleport 
+    //  Teleport 
 
     private IEnumerator Teleport(PlayerInteractor interactor)
     {
+        if (fadePanel == null)
+        {
+            Debug.LogWarning(name + ": the Fade Panel slot is empty, so the screen won't fade. Drag the Fade Panel (the object with the Canvas Group) into it.");
+        }
+
         // Freeze the player during the fade.
         interactor.LockPlayer(this, false);
 
@@ -165,6 +173,11 @@ public class TeleportDoorInteractable : MonoBehaviour, IInteractable, IInteracti
         yield return Fade(1f, 0f);
 
         interactor.UnlockPlayer();
+
+        if (!string.IsNullOrEmpty(checklistId))
+        {
+            ClueTrigger.DiscoverClue(checklistId);
+        }
     }
 
     // Fades the black panel from one alpha to another. Skipped if there is no fade panel.

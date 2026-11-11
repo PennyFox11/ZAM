@@ -5,17 +5,17 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-//Akhona Khoali This was exausting yoh 
-// Belongs in Canvas
+//Akhona khoali
+
+// belongs to canvas(inspector)
 // One database screen is shared by all three computers: it builds its buttons from
 // whichever ComputerInteractable the player opened.
-
-// Flow:  Boot screen (typed lines)  then Home (category buttons)  thenn  List (entries)  then  View (image / text)
+//
+// Flow:  Boot screen (typed lines)  ->  Home (category buttons)  ->  List (entries)  ->  View (image / text)
 // The Back button (top-right) goes back one page. E leaves the computer completely.
-// Entry text types itself out one letter at a time, like the dialogue box, the cursor blinks.
+// Entry text types itself out one letter at a time, like the dialogue box, then a cursor blinks.
 // Clicking the mouse while the boot screen or the text is typing skips to the end.
-public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteractionScreen is similar to the IInteractable interface, but for UI screens.
-                                                                   // It allows the PlayerInteractor to lock the player and show the mouse cursor while this screen is open.
+public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen
 {
     public static ComputerDatabaseUI Instance { get; private set; }
 
@@ -27,8 +27,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
     [Header("Button Containers")]
     public Transform categoryContainer; // Inside homePanel (add a Vertical Layout Group).
-    public Transform entryContainer;    // Inside listPanel (add a Vertical Layout Group).I learnt about vertical layout group from the Unity documentation.
-                                        //It is a component that automatically arranges its child elements in a vertical list, making it easier to create dynamic UI layouts.
+    public Transform entryContainer;    // Inside listPanel (add a Vertical Layout Group).
     public Button buttonPrefab;         // A Button with a TMP text child.
 
     [Header("Navigation")]
@@ -36,18 +35,22 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
     public TMP_Text titleText;          // Shows the computer / category / entry name.
 
     [Header("Entry Viewer")]
-    public Image entryImage;            // THIS just Shows the entry's image if it has one.
-    public TMP_Text entryText;          // THIS just Shows the entry's text if it has any.
+    public Image entryImage;
+    public TMP_Text entryText;
+
+    [Header("Enlarged Picture (optional)")]
+    public GameObject enlargedPanel;    // A full-screen dark panel (an Image) drawn on top of everything. Starts hidden.
+    public Image enlargedImage;         // Inside it, centred. Shows the clicked picture big. Click anywhere or press E to close.
 
     [Header("Audio")]
     public AudioSource audioSource;     // Plays the audio recordings.
-    public TMP_Text nowPlayingText;     // when audio files are playing 
+    public TMP_Text nowPlayingText;     // Optional: "Now playing: ..."
 
     [Header("Typing Effect (entry text)")]
-    public bool typeEntryText = true;       // Untick to show the text immediatlu.
+    public bool typeEntryText = true;       // Untick to show the text instantly.
     public float typingSpeed = 0.02f;       // Seconds between letters.
     public AudioClip typingClip;            // Optional. Loops while text types, stops when it finishes.
-    public bool showCursor = true;          // A blinking underscore (_) after the finished text.
+    public bool showCursor = true;          // A blinking "_" after the finished text.
     public float cursorBlinkSpeed = 0.5f;   // Seconds between blinks.
 
     [Header("Boot Screen")]
@@ -96,6 +99,19 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         backButton.onClick.AddListener(OnBackPressed);
         backButton.onClick.AddListener(PlayClick);
 
+        // Clicking an entry's picture enlarges it to the middle of the screen.
+        if (enlargedPanel != null)
+        {
+            enlargedPanel.SetActive(false);
+            GetOrAddButton(enlargedPanel).onClick.AddListener(HideEnlarged);
+        }
+
+        if (entryImage != null && enlargedPanel != null && enlargedImage != null)
+        {
+            entryImage.raycastTarget = true;
+            GetOrAddButton(entryImage.gameObject).onClick.AddListener(ShowEnlarged);
+        }
+
         // If no Audio Source was assigned, make one so audio recordings still play.
         if (audioSource == null)
         {
@@ -130,7 +146,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         }
     }
 
-    // opening and closing the computer this called by the ComputerInteractable when the player presses E.
+    // Opening and closing 
 
     public void Open(ComputerInteractable computer, PlayerInteractor interactor)
     {
@@ -164,6 +180,13 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
     // E leaves the computer completely.
     public void OnInteractPressed()
     {
+        // An enlarged picture closes first. A second press leaves the computer.
+        if (enlargedPanel != null && enlargedPanel.activeSelf)
+        {
+            HideEnlarged();
+            return;
+        }
+
         StopBoot();
         StopTyping();
         StopAudio();
@@ -174,7 +197,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         currentInteractor.UnlockPlayer();
     }
 
-    // TheBoot screen
+    // Boot screen 
 
     private IEnumerator BootSequence()
     {
@@ -194,7 +217,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
         foreach (string rawLine in GetBootLines(currentComputer))
         {
-            // {computer} string is replaced with the computer's name.
+            // {computer} is replaced with the computer's name.
             string line = rawLine.Replace("{computer}", currentComputer.computerName);
 
             if (typingClip != null)
@@ -272,10 +295,46 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         }
     }
 
-    // ThePages  
+    // Pages 
+
+    // Enlarged picture
+
+    private void ShowEnlarged()
+    {
+        if (enlargedPanel == null || enlargedImage == null || entryImage.sprite == null) return;
+
+        enlargedImage.sprite = entryImage.sprite;
+        enlargedImage.preserveAspect = true;
+        enlargedPanel.SetActive(true);
+        enlargedPanel.transform.SetAsLastSibling();     // Draw on top of the rest of the computer.
+        PlayClick();
+    }
+
+    private void HideEnlarged()
+    {
+        if (enlargedPanel != null)
+        {
+            enlargedPanel.SetActive(false);
+        }
+    }
+
+    // Finds the Button on an object, or adds one that does nothing visual (no colour tint).
+    private Button GetOrAddButton(GameObject target)
+    {
+        Button button = target.GetComponent<Button>();
+
+        if (button == null)
+        {
+            button = target.AddComponent<Button>();
+            button.transition = Selectable.Transition.None;
+        }
+
+        return button;
+    }
 
     private void ShowHome()
     {
+        HideEnlarged();
         currentPage = Page.Home;
         StopTyping();
         StopAudio();
@@ -291,7 +350,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
         foreach (DatabaseCategory category in currentComputer.categories)
         {
-            // Hidden categories (Case Studies) only appear once unlocked.//this is for only for the USB 
+            // Hidden categories (Case Studies) only appear once unlocked.
             if (!category.isUnlocked) continue;
 
             CreateButton(categoryContainer, category.categoryName, () => ShowList(category));
@@ -300,6 +359,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
     private void ShowList(DatabaseCategory category)
     {
+        HideEnlarged();
         currentPage = Page.List;
         currentCategory = category;
         StopTyping();
@@ -323,6 +383,13 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
     private void SelectEntry(DatabaseEntry entry)
     {
+        // An entry can be a clue by itself (a case file, a recording...) - report it the
+        // moment the player opens it, whether it's an image/text entry or an audio one.
+        if (!string.IsNullOrEmpty(entry.clueId))
+        {
+            ClueTrigger.DiscoverClue(entry.clueId);
+        }
+
         // Audio entries start playing straight away.
         if (entry.audio != null)
         {
@@ -339,6 +406,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
 
     private void ShowView(DatabaseEntry entry)
     {
+        HideEnlarged();
         currentPage = Page.View;
 
         homePanel.SetActive(false);
@@ -386,7 +454,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         }
     }
 
-    // Typing effect and cursor
+    // Typing effect and cursor 
 
     // Puts the text in the box with every letter hidden, and counts the letters.
     private void PrepareText(string fullText)
@@ -489,7 +557,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         isTyping = false;
     }
 
-    //  The Audio recordings Category viewpoint: plays the audio clip assigned to the entry, and shows the "Now playing" text.
+    // Audio recordings 
 
     private void PlayAudio(DatabaseEntry entry)
     {
@@ -519,7 +587,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         }
     }
 
-    //  Computer sounds but we'll focus on this in the next prototype 
+    //  Computer sounds 
 
     // Starts the hum, then plays the opening beep on top of it.
     private void PlayComputerOn()
@@ -558,7 +626,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
         }
     }
 
-    //  Button helpers
+    // Button helpers 
 
     private void CreateButton(Transform parent, string label, UnityAction onClick)
     {
@@ -590,7 +658,7 @@ public class ComputerDatabaseUI : MonoBehaviour, IInteractionScreen//  IInteract
     {
         foreach (Transform child in container)
         {
-            
+            // Deactivate first so the layout group ignores it straight away
             // (Destroy only happens at the end of the frame).
             child.gameObject.SetActive(false);
             Destroy(child.gameObject);

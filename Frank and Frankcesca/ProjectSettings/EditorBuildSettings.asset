@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Akhona's Folder/MainMenu.unity
+    guid: 05c0e9e70059af24588b835cd19d9f6d
+  - enabled: 1
     path: Assets/Scenes/Akhona's Folder/Scene 1.unity
     guid: 1b09d5c52c067fc4f95067d0f7dc6444
   m_configObjects:

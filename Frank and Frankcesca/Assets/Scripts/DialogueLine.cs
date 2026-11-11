@@ -9,7 +9,7 @@ public enum DialogueSpeaker
 }
 
 // One line of the conversation. Fill these in on the NPC in the Inspector.
-// We have both Player and  NPC to make it feel like a real back and forth betwwen them
+// Alternate Player / NPC to make it feel like a real back-and-forth.
 [System.Serializable]
 public class DialogueLine
 {
@@ -17,5 +17,8 @@ public class DialogueLine
     [TextArea(2, 5)]
     public string text;
 
-    public AudioClip voiceClip;     // Minnah asked to have voice recordings for each line, so we can play them when the line is shown.
+    public AudioClip voiceClip;     // Optional. The recorded voice for this line. Plays when the line appears.
+
+    [Tooltip("Optional. Matches a Clue Id in the EvidenceNotebook - reported to the notebook the moment this line is shown.")]
+    public string clueId = "";
 }

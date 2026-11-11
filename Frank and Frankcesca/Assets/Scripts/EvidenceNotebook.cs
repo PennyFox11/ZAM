@@ -6,8 +6,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+//Akhona Khoali
 
-// One clue in the notebook. Fill these in on the EvidenceNotebook in the Inspector.
+// One clue in the notebook.Will be Filled these in on the EvidenceNotebook in the Inspector.
 [Serializable]
 public class ClueEntry
 {
@@ -18,7 +19,7 @@ public class ClueEntry
     public Sprite image;        // The picture. It is shown as a dark shape until the clue is found.
 }
 
-// Put this on your UI manager object (an active object, NOT the panel).
+// Belongs on the EvidenceNotebook prefab. It is the main script that controls the notebook's behaviour.
 // Tab opens and closes the notebook. The notebook has two halves:
 //   LEFT  -> a scrollable, read-only list: every clue in the game gets a row with its picture,
 //            title and description. Locked clues show as "???" until the player finds them.
@@ -161,7 +162,7 @@ public class EvidenceNotebook : MonoBehaviour, IInteractionScreen
         return id == null ? "" : id.Trim();
     }
 
-    // ----- Input -----
+    // Input 
 
     // Hook this up in the Player Input component: Notebook action -> EvidenceNotebook.OnNotebook.
     public void OnNotebook(InputAction.CallbackContext context)
@@ -187,7 +188,7 @@ public class EvidenceNotebook : MonoBehaviour, IInteractionScreen
     {
     }
 
-    // ----- Opening and closing -----
+    //Opening and closing
 
     private void Open()
     {
@@ -246,7 +247,7 @@ public class EvidenceNotebook : MonoBehaviour, IInteractionScreen
         EventSystem.current.SetSelectedGameObject(null);
     }
 
-    // ----- Clues -----
+    //  Clues 
 
     // Called by ClueTrigger when the player finds a clue. Updates its row immediately,
     // whether or not the notebook is currently open.
@@ -290,6 +291,13 @@ public class EvidenceNotebook : MonoBehaviour, IInteractionScreen
         return notesInput != null ? notesInput.text : "";
     }
 
+    // Lets another screen (the interrogation carousel) pull a found clue's picture/title
+    // without duplicating the Clues list. Returns null if the id doesn't exist.
+    public ClueEntry GetClue(string clueId)
+    {
+        return FindClue(CleanId(clueId));
+    }
+
     private ClueEntry FindClue(string clueId)
     {
         foreach (ClueEntry clue in clues)
@@ -303,7 +311,7 @@ public class EvidenceNotebook : MonoBehaviour, IInteractionScreen
         return null;
     }
 
-    // ----- Notification -----
+    // Notification
 
     private void ShowNotification()
     {
