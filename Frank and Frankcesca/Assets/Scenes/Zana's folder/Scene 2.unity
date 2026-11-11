@@ -15618,6 +15618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d96580e0ce961e48bab9e9dabe790d2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 51bb898e44526364eb75237cd1e80618, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d96580e0ce961e48bab9e9dabe790d2, type: 3}
       propertyPath: m_Name
       value: DeskChair
@@ -30693,7 +30697,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 803914167}
+  m_Mesh: {fileID: 1192985051}
 --- !u!33 &147947675
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -35805,7 +35809,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1810157817}
+  m_Mesh: {fileID: 1530889337}
 --- !u!33 &198660785
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -37884,7 +37888,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1627250261}
+  m_Mesh: {fileID: 555382562}
 --- !u!33 &220379875
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -108509,7 +108513,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1530889337}
+  m_Mesh: {fileID: 356492509}
 --- !u!33 &703485188
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -201083,7 +201087,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 555382562}
+  m_Mesh: {fileID: 1961313590}
 --- !u!33 &1122374454
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -215738,6 +215742,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6057b022b875d614687d4ddd5bdc51a7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 87c1d014685d8e843bf73a1890b6ba9d, type: 2}
     - target: {fileID: 919132149155446097, guid: 6057b022b875d614687d4ddd5bdc51a7, type: 3}
       propertyPath: m_Name
       value: Desk
@@ -216402,6 +216410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6a376745ad200484ab257899896ecf02, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f6abadac20b55f0439724ab34fa01fba, type: 2}
     - target: {fileID: 919132149155446097, guid: 6a376745ad200484ab257899896ecf02, type: 3}
       propertyPath: m_Name
       value: BigCouch
@@ -296646,7 +296658,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 842788108}
+  m_Mesh: {fileID: 1127088705}
 --- !u!33 &1717003769
 MeshFilter:
   m_ObjectHideFlags: 10
