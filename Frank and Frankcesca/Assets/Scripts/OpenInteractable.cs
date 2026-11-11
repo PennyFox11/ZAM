@@ -17,7 +17,7 @@ public class OpenableInteractable : MonoBehaviour, IInteractable
     public bool isLocked = false;
     public string lockedMessage = "It's locked.";
 
-    [Header("Audio (optional)")]
+    [Header("Audio")]
     public AudioSource audioSource;                 // If empty, sounds still play from this position.
     public AudioClip openClip;                      // The creak.
     public AudioClip closeClip;

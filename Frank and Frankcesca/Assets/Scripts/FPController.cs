@@ -162,6 +162,9 @@ public class FPController : MonoBehaviour
     {
         if (Mouse.current == null) return;
 
+        // While a book is held, the scroll wheel flips its pages instead of zooming.
+        if (BookInteractable.Current != null) return;
+
         // The scroll value is usually +120 / -120 per tick, so it is normalised to +1 / -1.
         float scroll = Mouse.current.scroll.ReadValue().y / 120f;
 
