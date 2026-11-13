@@ -179312,7 +179312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.54
+      value: -17.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -179320,7 +179320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.68
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -222690,45 +222690,45 @@ MonoBehaviour:
     text: 'Keep frowning like that and your eyebrows will stay stuck, sweetie.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: bbc32d5af6600e140a4a0ec6ea14feea, type: 3}
     clueId: Talk_To_Ingrid
   - speaker: 0
     text: 'Work keeps piling up and I don''t mind that, but nothing is matching.
       It''s irritating.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b64a39c4c3c74b541ba048e7b0b34133, type: 3}
     clueId: 
   - speaker: 1
     text: ' Ah. So Bureau work as usual'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9ed0554de99cfa7419b425c8a03c7267, type: 3}
     clueId: 
   - speaker: 0
     text: ' That''s not reassuring, Ingrid.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: fa732cbd0818a0448873ed76a9d5cbf0, type: 3}
     clueId: 
   - speaker: 1
     text: No, dear. But whatever's bothering you will clear up. It always does, with
       you. Have you had lunch?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 44b262b16d7cc774fb2d3c1f50777e4d, type: 3}
     clueId: 
   - speaker: 0
     text: 'Coffee
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b52b887cad6099e4ab02bc059f53c8ec, type: 3}
     clueId: 
   - speaker: 1
     text: You really need to take care of your body better, Frankesca.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f8f7212ad50397a4ebe3cb65a97359fb, type: 3}
     clueId: 
   - speaker: 0
     text: ' Did you work with Frank much?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b21fc44e2253e8a408b4aac0ef0cf948, type: 3}
     clueId: 
   - speaker: 1
     text: ' Enough to know he was lovely when he remembered to stop working. Folders
@@ -222736,13 +222736,13 @@ MonoBehaviour:
       his lunch in the fridge for two days. These last months he wanted everything
       on paper. I told him paper is for people who don''t trust the terminals. He
       said, "Exactly, Ingrid." I thought it was a joke.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f36b1003be077f448988d955b48257b7, type: 3}
     clueId: 
   - speaker: 0
     text: ' Has the office changed much since you started?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d5f328dfaf38c704197e197c05b1c339, type: 3}
     clueId: 
   - speaker: 1
     text: ' It used to be noisier. The old terminals chirped at every update. People
@@ -222750,20 +222750,20 @@ MonoBehaviour:
       felt like a library.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2bf6f2b4517949349bf6424bed2ef2fb, type: 3}
     clueId: 
   - speaker: 0
     text: 'And now?
 
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: fcf7dbeba02d5564d8317688c185a81d, type: 3}
     clueId: 
   - speaker: 1
     text: Now you can hear the ventilation. Progress is wonderful, dear. It gives
       you new things to complain about. Whatever the case says, don't skip lunch
       to prove a point. The dead won't thank you for fainting on the job.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2167310f50df69a45ab3df2562c452ed, type: 3}
     clueId: 
   endsWithChoice: 0
   choicePrompt: What do you do?
@@ -223161,7 +223161,7 @@ MonoBehaviour:
   - speaker: 0
     text: It did. The system accepted the evidence. I know I was sent to close the
       file, sir, but closing it without checking Frank's work would be careless
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 39f625bc3ccbe7c4082e94d7067778c8, type: 3}
     clueId: 
   - speaker: 1
     text: You always did take that word personally. The Bureau knew Frank was looking
@@ -223173,7 +223173,7 @@ MonoBehaviour:
       mind and on his work.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a3578e75597ba8345917eafe07e0834c, type: 3}
     clueId: 
   - speaker: 1
     text: ' It bears on both. It isn''t evidence of a connection. He''d always been
@@ -223190,7 +223190,7 @@ MonoBehaviour:
       a reason.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9f0df395b43417a45bd8c0352c3dfc2a, type: 3}
     clueId: 
   - speaker: 1
     text: No. He didn't. And in the last months he wasn't sleeping, he missed appointments,
@@ -223203,7 +223203,7 @@ MonoBehaviour:
       every question for us.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 805e0c65bbbea1542afaa7a64c622cf7, type: 3}
     clueId: 
   - speaker: 1
     text: 'Of course. I understand the need to see this through.
@@ -223216,7 +223216,7 @@ MonoBehaviour:
     text: ' When did you last speak to him?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 0206aa3f6fee8634ba510763b839511b, type: 3}
     clueId: 
   - speaker: 1
     text: 'Earlier that week. In the corridor. I asked if he was sleeping. He said
@@ -223229,7 +223229,7 @@ MonoBehaviour:
     clueId: 
   - speaker: 0
     text: 'I''d appreciate that, sir. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ea3fabbd8609bd24590426fa418bfaf4, type: 3}
     clueId: 
   - speaker: 1
     text: ' And Frankcesca. Don''t turn being thorough into a way of punishing yourself
@@ -252515,7 +252515,7 @@ MonoBehaviour:
     clueId: 
   - speaker: 0
     text: ' You knew all along, didn''t you.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6b27c767d79d9a140aed25f6c1fef090, type: 3}
     clueId: 
   - speaker: 1
     text: 'Yes. '
@@ -252524,18 +252524,18 @@ MonoBehaviour:
   - speaker: 0
     text: 'This entire investigation, I assumed I''d misunderstood something. A date.
       A field. I kept looking for the version where I was wrong. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a9e0d6ff0e1305043b37b99068729e3f, type: 3}
     clueId: 
   - speaker: 1
     text: 'I know. It''s the best thing about you. I never wanted to be the one who
       proved it wasn''t always right. '
     voiceClip: {fileID: 0}
     clueId: 
-  - speaker: 1
+  - speaker: 0
     text: ' Frank Clifford was murdered. You murdered him.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ab4ea8737d15d3e408dccfa91772e179, type: 3}
     clueId: 
   - speaker: 1
     text: ' Frank Clifford was contained. (Pause) I''ve had days to find a better
@@ -252549,13 +252549,13 @@ MonoBehaviour:
     text: 'Ask me what the programme is for. Not Frank''s four. The others.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2384da145212bc841a23905e01faf43c, type: 3}
     clueId: 
   - speaker: 0
     text: 'How many are there?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2384da145212bc841a23905e01faf43c, type: 3}
     clueId: 
   - speaker: 1
     text: Of every ten thousand people we steer, roughly six do not take well to
@@ -252571,7 +252571,7 @@ MonoBehaviour:
   - speaker: 0
     text: "You spoke to him before he died? That\u2019s\u2026 Has my implant ever
       been..?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c4c24d6b8d1a63e46bbb4379744df8d3, type: 3}
     clueId: 
   - speaker: 1
     text: '(silence)
@@ -252583,7 +252583,7 @@ MonoBehaviour:
     text: 'Answer the question.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 1ab1f61f725a6894087fef3e1da5a145, type: 3}
     clueId: 
   - speaker: 1
     text: 'If I say no, you won''t believe me. If I say yes, you''ll never stop checking
@@ -283682,11 +283682,11 @@ MonoBehaviour:
     text: ' You''re the Bureau investigator?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c4b6f34e1628371428a10064041c99a6, type: 3}
     clueId: 
   - speaker: 0
     text: ' Frankcesca Clark. I assume you''re Menon? What have you found? '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: df42b7df90bfa974889649d4c4e2fc28, type: 3}
     clueId: 
   - speaker: 1
     text: 'Not much, Frank Clifford''s been dead fifteen, sixteen hours. Between
@@ -283694,49 +283694,49 @@ MonoBehaviour:
       injuries, no struggle. The implant killed him.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f0f00db3cabd1914eaa8de3cf8668814, type: 3}
     clueId: Time_Of_Death
   - speaker: 0
     text: 'He accessed it himself?
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f7536f3d0955c8248a37d3ee69fbe133, type: 3}
     clueId: 
   - speaker: 1
     text: 'The maintenance interface was opened locally. Safeguards disabled, then
       the implant overloaded. A neural shutdown.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 45c1966dfc2300649b971d7af2be51c9, type: 3}
     clueId: Evidence_Of_Suspicious_Activity
   - speaker: 0
     text: ' How long between those two steps?'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 147090972d85278468ab1579f9715c6d, type: 3}
     clueId: 
   - speaker: 1
     text: ' Seconds. People who''ve decided don''t hesitate.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: eb9c784afe707b9439ac9b66b158bdc2, type: 3}
     clueId: 
   - speaker: 0
     text: ' Anyone else involved?'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2c260b264041e0c4c903a1dcf39ab8a6, type: 3}
     clueId: 
   - speaker: 1
     text: ' His own key on the door log at 17:52, nothing after. No visitors recorded,
       no unusual network activity. Everything points the same direction.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 937a9ca7be9fca849b98b99adb2b5a5a, type: 3}
     clueId: 
   - speaker: 0
     text: ' Suicide.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a8033d7709d9a3d4eb6ae619f4cb2d42, type: 3}
     clueId: Cause_Of_Death
   - speaker: 1
     text: 'That''s the assessment. You can look again. I wouldn''t expect surprises.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d22a6d3638a6e244691364d1cff72cb6, type: 3}
     clueId: 
   endsWithChoice: 0
   choicePrompt: What do you do?
@@ -331132,7 +331132,7 @@ MonoBehaviour:
   - speaker: 0
     text: ' Yes, Mrs. Clifford. Frankcesca Clark. I worked with Frank. I know the
       Bureau already told you what it believes happened. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e7f85fca10c09c54f89d4551356c6d63, type: 3}
     clueId: 
   - speaker: 1
     text: 'They told me my son was unwell. As if I hadn''t noticed. As if I hadn''t
@@ -331141,7 +331141,7 @@ MonoBehaviour:
     clueId: 
   - speaker: 0
     text: Every Thursday?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9e49a0fabd4d3cc459fde642fdb483bc, type: 3}
     clueId: 
   - speaker: 1
     text: Twenty years. He called at seven. In August he stopped, and I said nothing,
@@ -331151,7 +331151,7 @@ MonoBehaviour:
   - speaker: 0
     text: ' I know this is difficult, and again, I''m sorry for asking. Do you know
       the password for his computer? I need to access his health app.  '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6dc832e0876ee74479a734bc5eef9e0b, type: 3}
     clueId: 
   - speaker: 1
     text: ' 1234. Just that. He always chose the worst passwords, didn''t he? As
@@ -331162,7 +331162,7 @@ MonoBehaviour:
     clueId: 
   - speaker: 0
     text: ' Thank you.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c754ee729b56ba640a40a68cb01cfedf, type: 3}
     clueId: 
   - speaker: 1
     text: 'Find out what he was frightened of. Please. And whatever it is, don''t
@@ -331175,7 +331175,7 @@ MonoBehaviour:
     text: 'I won''t.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 79da25f0ae0a56548b2caff94952d032, type: 3}
     clueId: 
   endsWithChoice: 0
   choicePrompt: What do you do?
@@ -345704,22 +345704,22 @@ MonoBehaviour:
   - speaker: 0
     text: ' Ingrid, you said a while ago that Frank kept old case materials in a
       locker.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 11b687cf88201964591a4dc6a10b9b69, type: 3}
     clueId: 
   - speaker: 0
     text: ' He thought a record was worth keeping if the reason it mattered hadn''t
       been written down yet. I have the code. I''ll give it to you'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 7d7f3d303660b7445b0554139ea9560e, type: 3}
     clueId: 
   - speaker: 0
     text: ' Thank you'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d7bf33dc43254e44da8726a09bcb2212, type: 3}
     clueId: Talk_to_Ingrid2
   - speaker: 1
     text: 'The code is 0744. Remember to take breaks, dearie.
 
 '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 90fd1130502f96b489b3eb5e6057d3ea, type: 3}
     clueId: 
   endsWithChoice: 0
   choicePrompt: What do you do?
@@ -443225,10 +443225,10 @@ MonoBehaviour:
       Source: Routine post-intervention
       review
 
-      Status: Returned to originating archive, 15 Sept, following
-      access reviewCustody note: Extract did not include the originating clinical
-      operator field.Returned as incomplete. Originating service reports the field
-      is unavailable at the investigator''s access tier.'
+      Status: Returned to originating archive, 15 Sept, following access
+      reviewCustody note: Extract did not include the originating clinical operator
+      field.Returned as incomplete. Originating service reports the field is unavailable
+      at the investigator''s access tier.'
     image: {fileID: 21300000, guid: 241365da5ebf75147b271a0a204de838, type: 3}
   - clueId: Time_Of_Death
     title: Conversation with Forensic Officer
@@ -443259,7 +443259,7 @@ MonoBehaviour:
       PRIMARY
       FINDING: Catastrophic neural-system failure
 
-      
+
 
 '
     image: {fileID: 21300000, guid: 241365da5ebf75147b271a0a204de838, type: 3}
