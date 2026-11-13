@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-//Akhona Khoali 
 
-// Belongs on any object the player can pick up.
+// Put this on any object the player can pick up.
 // The object also needs a Collider and (this script adds it for you) a Rigidbody.
 // NoteInteractable inherits from this script, so notes work the same way.
-
+//
 // The held object is NOT parented to the camera. Instead it copies the hold point's
 // position every frame. Parenting under a scaled object (like a stretched player or
 // camera) squashes and skews whatever is inside it, so this avoids that completely.
@@ -37,8 +36,12 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     public bool stopClipWhenDropped = false;    // Tick for a long recording that should cut off when the item is put down.
     public bool playClipOnlyOnce = false;       // Tick so picking it up a second time stays silent.
 
+    [Header("Control Hints (shown while held)")]
+    [Tooltip("One line each: an icon and what it does, e.g. E icon + 'drop'. Leave empty for none.")]
+    public ControlHint[] controlHints;
+
     [Header("Events")]
-    public UnityEvent onPickedUp;          // Later: tick the checklist, show the notebook notification...
+    public UnityEvent onPickedUp;         // Later: tick the checklist, show the notebook notification...
 
     private Rigidbody rb;
     private Collider[] colliders;
@@ -90,7 +93,7 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         transform.rotation = heldRotation;
     }
 
-    //  IInteractable 
+    // ----- IInteractable -----
 
     public virtual string GetPrompt()
     {
@@ -102,7 +105,8 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         // The interactor keeps track of what is being held, so ask it to hold us.
         interactor.Hold(this);
     }
-    // Called by PlayerInteractor 
+
+    // ----- Called by PlayerInteractor -----
 
     public void PickUp(Transform point)
     {
@@ -130,6 +134,11 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         }
 
         PlayPickupClip();
+
+        if (ControlHintsUI.Instance != null)
+        {
+            ControlHintsUI.Instance.Show(this, controlHints);
+        }
 
         onPickedUp.Invoke();
     }
@@ -159,6 +168,11 @@ public class PickupInteractable : MonoBehaviour, IInteractable
     {
         isHeld = false;
         holdTarget = null;
+
+        if (ControlHintsUI.Instance != null)
+        {
+            ControlHintsUI.Instance.Hide(this);
+        }
 
         if (stopClipWhenDropped && clipSource != null)
         {

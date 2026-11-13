@@ -1707,7 +1707,7 @@ MonoBehaviour:
   settingsPanel: {fileID: 445937829}
   creditsPanel: {fileID: 1802225495}
   quitConfirmPanel: {fileID: 1468297773}
-  gameSceneName: Scene 1
+  gameSceneName: Scene 3
 --- !u!114 &502903246
 MonoBehaviour:
   m_ObjectHideFlags: 0

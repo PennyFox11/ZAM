@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 // One line of the control list: a small icon (the mouse, the E key...) and what it does.
@@ -11,11 +12,11 @@ public class ControlHint
 }
 
 // Put this on your UI manager object (an active object, NOT the panel), like DialogueUI.
-// One shared "what can I do" list. Any item can show it:
-//     ControlHintsUI.Instance.Show(hints);   // when the player picks something up
-//     ControlHintsUI.Instance.Hide();        // when they put it down
-// It builds one row per hint from the Row Prefab, so the same panel serves the book and any
-// other interactable - each just hands over its own list.
+// One shared "what can I do" list. Anything can ask for it, and says who is asking:
+//     ControlHintsUI.Instance.Show(this, hints);   // the player picks something up / opens a screen
+//     ControlHintsUI.Instance.Hide(this);          // they put it down / close it
+// If two things want the list at once (holding a note, then switching the scanner on), the
+// newest one is shown, and the older one comes back when the newer one is hidden.
 public class ControlHintsUI : MonoBehaviour
 {
     public static ControlHintsUI Instance { get; private set; }
@@ -29,6 +30,13 @@ public class ControlHintsUI : MonoBehaviour
     [Tooltip("Optional: add a Canvas Group to the panel for a soft fade.")]
     public float fadeSpeed = 8f;
 
+    private class Entry
+    {
+        public UnityEngine.Object owner;
+        public ControlHint[] hints;
+    }
+
+    private readonly List<Entry> entries = new List<Entry>();
     private CanvasGroup group;
     private Coroutine fadeRoutine;
 
@@ -50,7 +58,32 @@ public class ControlHintsUI : MonoBehaviour
         }
     }
 
-    public void Show(ControlHint[] hints)
+    // "owner" is whoever is asking (usually "this"). An empty list just removes that owner.
+    public void Show(UnityEngine.Object owner, ControlHint[] hints)
+    {
+        RemoveOwner(owner);
+
+        if (hints != null && hints.Length > 0)
+        {
+            entries.Add(new Entry { owner = owner, hints = hints });
+        }
+
+        Refresh();
+    }
+
+    public void Hide(UnityEngine.Object owner)
+    {
+        RemoveOwner(owner);
+        Refresh();
+    }
+
+    private void RemoveOwner(UnityEngine.Object owner)
+    {
+        entries.RemoveAll(e => e.owner == owner);
+    }
+
+    // Shows the newest entry, or hides the panel when nobody wants it.
+    private void Refresh()
     {
         if (panel == null || rowContainer == null || rowPrefab == null)
         {
@@ -58,11 +91,19 @@ public class ControlHintsUI : MonoBehaviour
             return;
         }
 
-        if (hints == null || hints.Length == 0)
+        // Forget owners that have been destroyed (for example a pickup that was removed).
+        entries.RemoveAll(e => e.owner == null);
+
+        if (entries.Count == 0)
         {
-            Hide();
+            if (panel.activeSelf)
+            {
+                StartFade(0f, true);
+            }
             return;
         }
+
+        ControlHint[] hints = entries[entries.Count - 1].hints;
 
         foreach (Transform child in rowContainer)
         {
@@ -82,12 +123,6 @@ public class ControlHintsUI : MonoBehaviour
 
         panel.SetActive(true);
         StartFade(1f, false);
-    }
-
-    public void Hide()
-    {
-        if (panel == null || !panel.activeSelf) return;
-        StartFade(0f, true);
     }
 
     private void StartFade(float target, bool hideWhenDone)

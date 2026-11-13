@@ -2,21 +2,21 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-//Akhona Khoali
-// One question on the report. Must be filled in on the ReportExamUI in the Inspector, one per
+
+// One question on the report. Fill these in on the ReportExamUI in the Inspector, one per
 // blank already laid out on the form in the Canvas.
 [Serializable]
 public class ReportQuestion
 {
     [TextArea(1, 2)]
-    public string questionLabel;            // Just for your own reference in the Inspector, e.g. "Who killed Frank?".
+    public string questionLabel;            // Just for your own reference in the Inspector, e.g. "Who killed Ane?".
     public ReportAnswerSlot answerSlot;     // The blank the player drags evidence onto.
 
     [Tooltip("Clue Ids from the EvidenceNotebook. Dropping ANY ONE of these into the blank counts as correct.")]
     public string[] acceptableClueIds;
 }
 
-// Sits on Canvas objects that are the blanks on the report form. The player drags a clue chip onto it.
+// Put this on your UI manager object (an active object, NOT the panel).
 // Shift opens and closes the case report. Instead of typing, the player drags evidence they have
 // collected in the EvidenceNotebook (the chips in the tray) onto the blanks, then presses Submit:
 //   - a correct blank turns green, a wrong or empty one turns red
@@ -63,6 +63,9 @@ public class ReportExamUI : MonoBehaviour, IInteractionScreen
     public AudioClip wrongClip;
     public AudioClip successClip;
 
+    [Header("Control Hints (shown while the report is open)")]
+    public ControlHint[] controlHints;
+
     public bool IsComplete { get; private set; }
 
     private PlayerInteractor interactor;
@@ -91,7 +94,7 @@ public class ReportExamUI : MonoBehaviour, IInteractionScreen
         sfxAudioSource.pitch = 1f;
     }
 
-    // Join this up in the Player Input component: Report action -> ReportExamUI.OnReport.
+    // Hook this up in the Player Input component: Report action -> ReportExamUI.OnReport.
     public void OnReport(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
@@ -118,6 +121,11 @@ public class ReportExamUI : MonoBehaviour, IInteractionScreen
     {
         isOpen = true;
         reportPanel.SetActive(true);
+
+        if (ControlHintsUI.Instance != null)
+        {
+            ControlHintsUI.Instance.Show(this, controlHints);
+        }
 
         BuildChips();
 
@@ -163,6 +171,11 @@ public class ReportExamUI : MonoBehaviour, IInteractionScreen
         isOpen = false;
         HideClueInfo();
         reportPanel.SetActive(false);
+
+        if (ControlHintsUI.Instance != null)
+        {
+            ControlHintsUI.Instance.Hide(this);
+        }
 
         if (interactor != null)
         {

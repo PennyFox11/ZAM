@@ -248,7 +248,7 @@ public class DialogueUI : MonoBehaviour, IInteractionScreen
         isTyping = false;
     }
 
-    // Ending choice (A or B, then the game ends)
+    // Ending choice (A or B, then a cutscene, then the main menu)
 
     private void ShowChoice()
     {
@@ -297,15 +297,27 @@ public class DialogueUI : MonoBehaviour, IInteractionScreen
 
         if (string.IsNullOrEmpty(choice.sceneName))
         {
-            Debug.LogWarning("DialogueUI: the chosen option has no Scene Name, so nothing was loaded. Type the credits scene's name into it.");
+            Debug.LogWarning("DialogueUI: the chosen option has no Scene Name, so nothing was loaded. Type the main menu scene's name into it.");
             choicePanel.SetActive(false);
             FinishAndRelease();
             return;
         }
 
-        // The cursor stays visible so the credits scene's buttons (if any) can be clicked.
+        // Hide the dialogue, then play this option's video. The cutscene loads the main menu when it ends.
         Time.timeScale = 1f;
-        SceneManager.LoadScene(choice.sceneName);
+        choicePanel.SetActive(false);
+        dialoguePanel.SetActive(false);
+        StopVoice();
+
+        if (EndingCutscene.Instance != null)
+        {
+            EndingCutscene.Instance.Play(choice);
+        }
+        else
+        {
+            // Fallback if the cutscene panel is missing: go straight to the scene.
+            SceneManager.LoadScene(choice.sceneName);
+        }
     }
 
     private void EndDialogue()

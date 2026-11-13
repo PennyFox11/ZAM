@@ -25,6 +25,9 @@ public class PlayerScanner : MonoBehaviour
     [Range(0f, 1f)]
     public float volume = 1f;
 
+    [Header("Control Hints (shown while the scanner is on)")]
+    public ControlHint[] controlHints;
+
     public bool IsOn { get; private set; }
 
     private PlayerInteractor interactor;

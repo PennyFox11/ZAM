@@ -1401,6 +1401,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1841726136}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9338233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9338234}
+  - component: {fileID: 9338236}
+  - component: {fileID: 9338235}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9338234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9338233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 357694723}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9338235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9338233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &9338236
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9338233}
+  m_CullTransparentMesh: 1
 --- !u!1 &9359348
 GameObject:
   m_ObjectHideFlags: 0
@@ -42589,10 +42661,12 @@ MonoBehaviour:
     label: 
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!136 &260097600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -50251,6 +50325,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -55666,6 +55741,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -58217,6 +58293,11 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints:
+  - icon: {fileID: 21300000, guid: dff918ccb3a9af14f84f2a0eec14dcbf, type: 3}
+    label: remember
+  - icon: {fileID: 21300000, guid: 4b3683d5cad5a02498345060eab386f8, type: 3}
+    label: yebo
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -58235,13 +58316,6 @@ MonoBehaviour:
   openScale: 2
   autoFitCollider: 1
   worldModel: {fileID: 318159102}
-  controlHints:
-  - icon: {fileID: 21300000, guid: 41a68c41e877f9a42935195c2ffccecf, type: 3}
-    label: SCROLL TO FLIP
-  - icon: {fileID: 21300000, guid: dff918ccb3a9af14f84f2a0eec14dcbf, type: 3}
-    label: CALL MAAM
-  - icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    label: CHECKMATE
   openSeconds: 0.5
   flipSeconds: 0.45
   curve:
@@ -64626,6 +64700,136 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &357694722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357694723}
+  - component: {fileID: 357694727}
+  - component: {fileID: 357694726}
+  - component: {fileID: 357694725}
+  - component: {fileID: 357694724}
+  m_Layer: 5
+  m_Name: Ending cutscene panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357694723
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357694722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9338234}
+  m_Father: {fileID: 2115174681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &357694724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357694722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273e1eb0a569dc443935edd8311a792c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndingCutscene
+  cutscenePanel: {fileID: 357694722}
+  screen: {fileID: 9338235}
+  videoPlayer: {fileID: 357694725}
+  allowSkip: 1
+--- !u!328 &357694725
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357694722}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &357694726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357694722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &357694727
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357694722}
+  m_CullTransparentMesh: 1
 --- !u!1 &357882561
 GameObject:
   m_ObjectHideFlags: 0
@@ -72156,10 +72360,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!114 &416026536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94288,6 +94494,13 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints:
+  - icon: {fileID: 21300000, guid: 31d307b52c824d64daa5512a4bf555b4, type: 3}
+    label: scroll
+  - icon: {fileID: 21300000, guid: aec8258e365d9e447b96594e3c125af4, type: 3}
+    label: zoom
+  - icon: {fileID: 0}
+    label: 
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -122415,6 +122628,11 @@ MonoBehaviour:
   openClip: {fileID: 0}
   wrongClip: {fileID: 0}
   successClip: {fileID: 0}
+  controlHints:
+  - icon: {fileID: 21300000, guid: a45f6c47aaf34fe409f7776cea3778fc, type: 3}
+    label: submit
+  - icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    label: drag
 --- !u!114 &699273225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123774,10 +123992,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!114 &726650728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125921,6 +126141,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -136365,10 +136586,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!23 &824332887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -197465,6 +197688,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -200564,10 +200788,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!1 &1080844988
 GameObject:
   m_ObjectHideFlags: 0
@@ -205378,6 +205604,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 1
   playClipOnlyOnce: 1
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -224156,6 +224383,13 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints:
+  - icon: {fileID: 0}
+    label: eat
+  - icon: {fileID: 0}
+    label: pie
+  - icon: {fileID: 0}
+    label: 
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -228613,6 +228847,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -233218,6 +233453,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -259612,12 +259848,14 @@ MonoBehaviour:
 '
     endingId: 
     sceneName: MainMenu
+    endingVideo: {fileID: 32900000, guid: 072347cc939d2b647b4424fb7a2a6b54, type: 3}
   optionB:
     label: ' Destroy
 
 '
     endingId: 
     sceneName: MainMenu
+    endingVideo: {fileID: 32900000, guid: 12e9f504c30519043ae63789f5e8f88b, type: 3}
 --- !u!43 &1392460853
 Mesh:
   m_ObjectHideFlags: 0
@@ -261761,6 +261999,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -263721,7 +263960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1430390199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -287455,6 +287694,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -287688,6 +287928,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -299942,10 +300183,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!1 &1621231115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdcaccff022a71342a94cfe32c037e50, type: 3}
@@ -299993,6 +300236,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -328218,6 +328462,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -351891,6 +352136,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -352648,7 +352894,7 @@ Transform:
   m_GameObject: {fileID: 1895196501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.01977916, z: -0, w: 0.9998044}
-  m_LocalPosition: {x: -4.5, y: 1.3752, z: 28.1}
+  m_LocalPosition: {x: 255.7, y: 1.3752, z: 26.3}
   m_LocalScale: {x: 1.4055841, y: 1.211136, z: 1.4961}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -352762,6 +353008,7 @@ MonoBehaviour:
   loopClip: {fileID: 8300000, guid: 64025245cd7778a42b25379cf9ca3984, type: 3}
   toggleOffClip: {fileID: 8300000, guid: e7947cad9b2088045b4682e000bf688b, type: 3}
   volume: 0.555
+  controlHints: []
 --- !u!1 &1898374844
 GameObject:
   m_ObjectHideFlags: 0
@@ -396292,6 +396539,7 @@ RectTransform:
   - {fileID: 617756440}
   - {fileID: 1078126646}
   - {fileID: 1430390199}
+  - {fileID: 357694723}
   - {fileID: 63558515}
   - {fileID: 1449673454}
   - {fileID: 1694845487}
@@ -396407,6 +396655,11 @@ MonoBehaviour:
   openClip: {fileID: 8300000, guid: c20ad1bb81618d543a4a33249eba0c22, type: 3}
   closeClip: {fileID: 8300000, guid: c20ad1bb81618d543a4a33249eba0c22, type: 3}
   newClueClip: {fileID: 8300000, guid: ef215c90b564b604290c9a72ec0e9cc1, type: 3}
+  controlHints:
+  - icon: {fileID: 21300000, guid: 31d307b52c824d64daa5512a4bf555b4, type: 3}
+    label: scroll
+  - icon: {fileID: 21300000, guid: a45f6c47aaf34fe409f7776cea3778fc, type: 3}
+    label: type
 --- !u!114 &2115174684
 MonoBehaviour:
   m_ObjectHideFlags: 0

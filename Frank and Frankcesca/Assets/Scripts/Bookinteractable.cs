@@ -49,10 +49,6 @@ public class BookInteractable : PickupInteractable
     [Tooltip("The good-looking 3D book that sits in the world. It is shown until the player presses E, then hidden while the pages take over, and shown again when the book is put down. It must be a CHILD of this object. Leave empty to use this object's own mesh.")]
     public GameObject worldModel;
 
-    [Header("Control Hints (shown only while the book is held)")]
-    [Tooltip("One line each: an icon and what it does, e.g. right-click icon + 'open/close'.")]
-    public ControlHint[] controlHints;
-
     [Header("Animation")]
     public float openSeconds = 0.5f;
     public float flipSeconds = 0.45f;
@@ -137,28 +133,6 @@ public class BookInteractable : PickupInteractable
         if (visual != null)
         {
             visual.gameObject.SetActive(held);
-        }
-
-        // The "what can I do" list is only up while the book is in the player's hands.
-        if (held && ControlHintsUI.Instance == null)
-        {
-            Debug.LogWarning("BookInteractable: there is no ControlHintsUI in the scene, so no control list is shown.", this);
-        }
-        else if (held && (controlHints == null || controlHints.Length == 0))
-        {
-            Debug.LogWarning("BookInteractable: Control Hints is empty on this book, so there is nothing to show.", this);
-        }
-
-        if (ControlHintsUI.Instance != null)
-        {
-            if (held)
-            {
-                ControlHintsUI.Instance.Show(controlHints);
-            }
-            else
-            {
-                ControlHintsUI.Instance.Hide();
-            }
         }
 
         if (worldModel != null && worldModel != gameObject)
