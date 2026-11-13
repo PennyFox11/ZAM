@@ -40393,7 +40393,6 @@ Transform:
   - {fileID: 59836778}
   - {fileID: 1468203062}
   - {fileID: 1181438404}
-  - {fileID: 260097603}
   - {fileID: 1055453141}
   - {fileID: 1577981205}
   - {fileID: 123575178}
@@ -42694,6 +42693,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225511539}
   m_CullTransparentMesh: 1
+--- !u!1001 &226093825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113609853}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6113
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1868
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6152205
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.83
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Name
+      value: FRANKLIN2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95b868b2c5a9d7a4f81a3247b89b3a66, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275350343981809539, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1255974220}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1255974219}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1255974218}
+  m_SourcePrefab: {fileID: 100100000, guid: 587b22c94d3704b48971a874868971b4, type: 3}
 --- !u!1 &226256202
 GameObject:
   m_ObjectHideFlags: 0
@@ -45242,213 +45331,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &260097598
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 260097603}
-  - component: {fileID: 260097602}
-  - component: {fileID: 260097601}
-  - component: {fileID: 260097600}
-  - component: {fileID: 260097599}
-  m_Layer: 0
-  m_Name: LOW POLY
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &260097599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260097598}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Forensic officer Vivek Menon
-  npcPortrait: {fileID: 21300000, guid: 12a7c96c24e242f4195844f003ab19f4, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 1
-    text: You're the Bureau investigator?
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'Yes, that''s me. What have you found?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Alright, then. Frank Clifford has been dead approximately fifteen to
-      sixteen hours, so the death happened between around seven to eight PM, sixteenth
-      October. No sign of forced entry. No defensive injuries. No evidence of a struggle.'
-    voiceClip: {fileID: 0}
-    clueId: Time_Of_Death
-  - speaker: 1
-    text: ' His implant is the cause of death.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Cause_Of_Death
-  - speaker: 0
-    text: ' He accessed it himself?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Looks like it. The maintenance interface was manually opened. Neural
-      safeguards were disabled from the local interface, then the implant was overloaded.
-      It was a neural shutdown that killed him.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Evidence_Of_Suspicious_Activity
-  - speaker: 0
-    text: ' Any indication someone else was involved?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Nothing we''ve found. His apartment security logs are clean. No unauthorised
-      entries. No unusual network activity around the time of death. Everything points
-      in the same direction.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Suicide.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' That''s our assessment. You can take another look if you want, but I
-      wouldn''t expect surprises.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 0
-  choicePrompt: 
-  optionA:
-    label: 
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
-  optionB:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
---- !u!136 &260097600
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260097598}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.6959714
-  m_Height: 4.981971
-  m_Direction: 1
-  m_Center: {x: -0.028770182, y: 2.5019472, z: 0.05794846}
---- !u!23 &260097601
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260097598}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0584c59157623df4f86b66b7c095f620, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &260097602
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260097598}
-  m_Mesh: {fileID: -1717949051616439185, guid: 67f5a6c0b48f9604386b1d3437924a00, type: 3}
---- !u!4 &260097603
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260097598}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0446, y: -4.1475, z: -9.928349}
-  m_LocalScale: {x: 0.57508904, y: 0.51164514, z: 0.94896}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 204768268}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260814436
 GameObject:
   m_ObjectHideFlags: 0
@@ -62085,7 +61967,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.013, y: 0.542, z: 0.037}
+  m_LocalPosition: {x: -0.013, y: 0.839, z: 0.217}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75754,242 +75636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032423983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &416026533 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 866890974}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &416026534 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 866890974}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &416026535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Franklin
-  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 1
-    text: ' I''m told the extension went through.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Talk_To_Franklin1
-  - speaker: 0
-    text: It did. The system accepted the evidence. I know I was sent to close the
-      file, sir, but closing it without checking Frank's work would be careless
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: You always did take that word personally. The Bureau knew Frank was looking
-      outside his assigned cases. Near the end he wasn't discreet about it.
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'Then why isn''t it in the preliminary report? It bears on his state of
-      mind and on his work.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' It bears on both. It isn''t evidence of a connection. He''d always been
-      obsessive. You know that. If there was a discrepancy in a report, Frank would
-      sit with it until he''d convinced himself he''d found the reason. That''s part
-      of what made him good. But there came a point where the discrepancy itself
-      became proof to him that something was wrong. Eventually, every perceived link
-      between evidence became a conspiracy. He most likely made some groundless link
-      between cases and chased it.'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' I know what he was like. I also know he never started a comparison without
-      a reason.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: No. He didn't. And in the last months he wasn't sleeping, he missed appointments,
-      he was frightened by things he'd once have dismissed. People in this office
-      saw it. Maybe he saw a reason, but it might not be all that justifying.
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'I''m not disputing that he was unwell. I''m saying it shouldn''t answer
-      every question for us.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Of course. I understand the need to see this through.
-
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' When did you last speak to him?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Earlier that week. In the corridor. I asked if he was sleeping. He said
-      yes. I should''ve pushed more. If you find something that contradicts the official
-      record, bring it to me. That''s the protocol, and I''ll go through it with
-      you.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'I''d appreciate that, sir. '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' And Frankcesca. Don''t turn being thorough into a way of punishing yourself
-      for not being able to tell that he''d do what he did.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 0
-  choicePrompt: What do you do?
-  optionA:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
-  optionB:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
---- !u!114 &416026536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244fdd8fff586fb419f74732a8c901e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcWaypointWalker
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  pathMode: 1
-  waitAtWaypoint: 2
-  walkSpeed: 1.4
-  player: {fileID: 1895196510}
-  stopDistance: 4
-  turnSpeed: 5
-  animator: {fileID: 416026540}
-  speedParameter: 
-  speedDamping: 0.1
---- !u!195 &416026537
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &416026538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b33f110f81975468d4576fb1fa36e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcAnimation
-  player: {fileID: 1895196510}
-  talkDistance: 4
-  animator: {fileID: 0}
-  idleState: Idle 2
-  walkState: Walk
-  talkState: Shrug
-  crossFadeSeconds: 0.2
-  walkSpeedThreshold: 0.1
---- !u!136 &416026539
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.3459704
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.6729852, z: 0}
---- !u!95 &416026540
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416026533}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_Controller: {fileID: 9100000, guid: 264522ebbe6b18b47ae6af12315e4fb7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &417948282
 GameObject:
   m_ObjectHideFlags: 0
@@ -98580,7 +98226,9 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
-  controlHints: []
+  controlHints:
+  - icon: {fileID: 21300000, guid: 77a32592a390a3f4787cebbebc7b9bdd, type: 3}
+    label: dfgcbbb
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -103135,6 +102783,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2037334341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &551184655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 2105175734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &552058826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b8965fcc7d0bd2b47bc0d8dec8df779b, type: 3}
@@ -110058,6 +109711,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 990532819}
   m_LocalEulerAnglesHint: {x: 0, y: -89.892, z: 0}
+--- !u!1001 &581885465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113609853}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5782869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4657252
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.583681
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.71
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.035157602
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9993818
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -184.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Name
+      value: FRANKLIN1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95b868b2c5a9d7a4f81a3247b89b3a66, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275350343981809539, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1117617209}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1117617208}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1117617207}
+  m_SourcePrefab: {fileID: 100100000, guid: 587b22c94d3704b48971a874868971b4, type: 3}
 --- !u!43 &582183788
 Mesh:
   m_ObjectHideFlags: 0
@@ -130453,176 +130196,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &726650725 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1598211363}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &726650726 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1598211363}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &726650727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Detective Ingrid
-  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 0
-    text: ' Ingrid, you said a while ago that Frank kept old case materials in a
-      locker.'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' He thought a record was worth keeping if the reason it mattered hadn''t
-      been written down yet. I have the code. I''ll give it to you'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Thank you'
-    voiceClip: {fileID: 0}
-    clueId: Talk_to_Ingrid2
-  - speaker: 1
-    text: 'The code is 0744. Remember to take breaks, dearie.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 0
-  choicePrompt: What do you do?
-  optionA:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
-  optionB:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
---- !u!114 &726650728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244fdd8fff586fb419f74732a8c901e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcWaypointWalker
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  pathMode: 1
-  waitAtWaypoint: 2
-  walkSpeed: 1.4
-  player: {fileID: 1895196510}
-  stopDistance: 4
-  turnSpeed: 5
-  animator: {fileID: 726650732}
-  speedParameter: 
-  speedDamping: 0.1
---- !u!195 &726650729
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &726650730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b33f110f81975468d4576fb1fa36e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcAnimation
-  player: {fileID: 1895196510}
-  talkDistance: 4
-  animator: {fileID: 0}
-  idleState: Idle 2
-  walkState: Walk
-  talkState: Shrug
-  crossFadeSeconds: 0.2
-  walkSpeedThreshold: 0.1
---- !u!136 &726650731
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.3459704
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.6729852, z: 0}
---- !u!95 &726650732
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726650725}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_Controller: {fileID: 9100000, guid: 264522ebbe6b18b47ae6af12315e4fb7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &727840471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144403,210 +143976,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &824332885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 824332889}
-  - component: {fileID: 824332888}
-  - component: {fileID: 824332887}
-  - component: {fileID: 824332886}
-  - component: {fileID: 824332890}
-  m_Layer: 0
-  m_Name: 'Forenstic officer '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &824332886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824332885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Forensic officer Vivek Menon
-  npcPortrait: {fileID: 21300000, guid: 12a7c96c24e242f4195844f003ab19f4, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 1
-    text: ' You''re the Bureau investigator?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Frankcesca Clark. I assume you''re Menon? What have you found? '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Not much, Frank Clifford''s been dead fifteen, sixteen hours. Between
-      seven and eight last night, sixteenth October. No forced entry, no defensive
-      injuries, no struggle. The implant killed him.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Time_Of_Death
-  - speaker: 0
-    text: 'He accessed it himself?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'The maintenance interface was opened locally. Safeguards disabled, then
-      the implant overloaded. A neural shutdown.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Evidence_Of_Suspicious_Activity
-  - speaker: 0
-    text: ' How long between those two steps?'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Seconds. People who''ve decided don''t hesitate.'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Anyone else involved?'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' His own key on the door log at 17:52, nothing after. No visitors recorded,
-      no unusual network activity. Everything points the same direction.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Suicide.'
-    voiceClip: {fileID: 0}
-    clueId: Cause_Of_Death
-  - speaker: 1
-    text: 'That''s the assessment. You can look again. I wouldn''t expect surprises.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 0
-  choicePrompt: What do you do?
-  optionA:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
-  optionB:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
---- !u!23 &824332887
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824332885}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0584c59157623df4f86b66b7c095f620, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &824332888
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824332885}
-  m_Mesh: {fileID: -1717949051616439185, guid: 3e02855e2340601409d859a65d78c9da, type: 3}
---- !u!4 &824332889
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824332885}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99874204, z: -0, w: 0.050144047}
-  m_LocalPosition: {x: -302.64636, y: -4.5998983, z: 0.52687836}
-  m_LocalScale: {x: 0.59954005, y: 0.49173042, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1113609853}
-  m_LocalEulerAnglesHint: {x: 0, y: 174.252, z: 0}
---- !u!136 &824332890
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824332885}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7933511
-  m_Height: 4.9819703
-  m_Direction: 1
-  m_Center: {x: -0.05297222, y: 2.5019476, z: -0.031671524}
 --- !u!1 &825845532
 GameObject:
   m_ObjectHideFlags: 0
@@ -152496,97 +151865,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1001 &866890974
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1113609853}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7925754
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2705852
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4964
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.1463928
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.87522
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.8750305
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_Name
-      value: Franklin1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8275350343981809539, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026540}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026539}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026538}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026537}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026536}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 416026535}
-  m_SourcePrefab: {fileID: 100100000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
 --- !u!43 &869377496
 Mesh:
   m_ObjectHideFlags: 0
@@ -178304,6 +177582,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952735587}
   m_CullTransparentMesh: 1
+--- !u!1001 &954948793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113609853}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0102386
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7131964
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0963242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.54
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6152205
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.68
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Name
+      value: Ingrid1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95b868b2c5a9d7a4f81a3247b89b3a66, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275350343981809539, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1114593843}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1114593842}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1114593840}
+  m_SourcePrefab: {fileID: 100100000, guid: 587b22c94d3704b48971a874868971b4, type: 3}
 --- !u!1001 &955546672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -211768,230 +211136,6 @@ Transform:
   - {fileID: 1898374845}
   m_Father: {fileID: 1017623151}
   m_LocalEulerAnglesHint: {x: 6.515, y: 59.415, z: 80.153}
---- !u!1 &1080461853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1108180878}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1080461854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244fdd8fff586fb419f74732a8c901e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcWaypointWalker
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  pathMode: 1
-  waitAtWaypoint: 2
-  walkSpeed: 1.4
-  player: {fileID: 1895196510}
-  stopDistance: 4
-  turnSpeed: 5
-  animator: {fileID: 1080461859}
-  speedParameter: 
-  speedDamping: 0.1
---- !u!195 &1080461855
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1080461856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b33f110f81975468d4576fb1fa36e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcAnimation
-  player: {fileID: 1895196510}
-  talkDistance: 4
-  animator: {fileID: 0}
-  idleState: Idle 2
-  walkState: Walk
-  talkState: Shrug
-  crossFadeSeconds: 0.2
-  walkSpeedThreshold: 0.1
---- !u!136 &1080461858
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.3459704
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.6729852, z: 0}
---- !u!95 &1080461859
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_Controller: {fileID: 9100000, guid: 264522ebbe6b18b47ae6af12315e4fb7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1080461860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080461853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Detective Ingrid
-  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 1
-    text: 'Keep frowning like that and your eyebrows will stay stuck, sweetie.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: Talk_To_Ingrid
-  - speaker: 0
-    text: 'Work keeps piling up and I don''t mind that, but nothing is matching.
-      It''s irritating.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Ah. So Bureau work as usual'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' That''s not reassuring, Ingrid.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: No, dear. But whatever's bothering you will clear up. It always does, with
-      you. Have you had lunch?
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'Coffee
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: You really need to take care of your body better, Frankesca.
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Did you work with Frank much?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Enough to know he was lovely when he remembered to stop working. Folders
-      came back with every page aligned and every tab straight. Then he''d forget
-      his lunch in the fridge for two days. These last months he wanted everything
-      on paper. I told him paper is for people who don''t trust the terminals. He
-      said, "Exactly, Ingrid." I thought it was a joke.'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' Has the office changed much since you started?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' It used to be noisier. The old terminals chirped at every update. People
-      complained until they replaced them. Then everyone complained that the office
-      felt like a library.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'And now?
-
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: Now you can hear the ventilation. Progress is wonderful, dear. It gives
-      you new things to complain about. Whatever the case says, don't skip lunch
-      to prove a point. The dead won't thank you for fainting on the job.
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 0
-  choicePrompt: What do you do?
-  optionA:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
-  optionB:
-    label: Option
-    endingId: 
-    sceneName: Credits
-    endingVideo: {fileID: 0}
 --- !u!1 &1080844988
 GameObject:
   m_ObjectHideFlags: 0
@@ -217981,102 +217125,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1001 &1108180878
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1113609853}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7925754
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2705852
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4964
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -16.433594
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.87522
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.3350296
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_Name
-      value: Ingrid 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8275350343981809539, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461859}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461858}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461856}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461855}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461854}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1080461860}
-  m_SourcePrefab: {fileID: 100100000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
---- !u!4 &1108180879 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1108180878}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1109020024
 GameObject:
   m_ObjectHideFlags: 0
@@ -221747,13 +220795,177 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 416026534}
-  - {fileID: 1249382984}
-  - {fileID: 726650726}
-  - {fileID: 1108180879}
-  - {fileID: 824332889}
+  - {fileID: 1411760515}
+  - {fileID: 1117617206}
+  - {fileID: 1255974216}
+  - {fileID: 1114593838}
+  - {fileID: 1664683500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1114593837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 954948793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1114593838 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 954948793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1114593839 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 954948793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1114593840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114593837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78fe2688537f6e4da77047dd921e4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimator
+  animator: {fileID: 1114593839}
+  smoothing: 10
+  randomiseIdleStart: 1
+  turnSpeed: 5
+  waypoints: []
+  waitTime: 2
+--- !u!136 &1114593842
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114593837}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.38230896
+  m_Height: 2.2826617
+  m_Direction: 1
+  m_Center: {x: -0.049972534, y: 0.64133084, z: 0}
+--- !u!114 &1114593843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114593837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
+  npcName: Detective Ingrid
+  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
+  playerName: Detective Francesca
+  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
+  lines:
+  - speaker: 1
+    text: 'Keep frowning like that and your eyebrows will stay stuck, sweetie.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: Talk_To_Ingrid
+  - speaker: 0
+    text: 'Work keeps piling up and I don''t mind that, but nothing is matching.
+      It''s irritating.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' Ah. So Bureau work as usual'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' That''s not reassuring, Ingrid.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: No, dear. But whatever's bothering you will clear up. It always does, with
+      you. Have you had lunch?
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'Coffee
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: You really need to take care of your body better, Frankesca.
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Did you work with Frank much?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' Enough to know he was lovely when he remembered to stop working. Folders
+      came back with every page aligned and every tab straight. Then he''d forget
+      his lunch in the fridge for two days. These last months he wanted everything
+      on paper. I told him paper is for people who don''t trust the terminals. He
+      said, "Exactly, Ingrid." I thought it was a joke.'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Has the office changed much since you started?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' It used to be noisier. The old terminals chirped at every update. People
+      complained until they replaced them. Then everyone complained that the office
+      felt like a library.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'And now?
+
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: Now you can hear the ventilation. Progress is wonderful, dear. It gives
+      you new things to complain about. Whatever the case says, don't skip lunch
+      to prove a point. The dead won't thank you for fainting on the job.
+    voiceClip: {fileID: 0}
+    clueId: 
+  endsWithChoice: 0
+  choicePrompt: What do you do?
+  optionA:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+  optionB:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!1 &1117363631
 GameObject:
   m_ObjectHideFlags: 0
@@ -222083,6 +221295,178 @@ Transform:
   - {fileID: 180969919}
   m_Father: {fileID: 990532819}
   m_LocalEulerAnglesHint: {x: 0, y: -0.015, z: 0}
+--- !u!1 &1117617205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 581885465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1117617206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 581885465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117617207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117617205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78fe2688537f6e4da77047dd921e4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimator
+  animator: {fileID: 1117617210}
+  smoothing: 10
+  randomiseIdleStart: 1
+  turnSpeed: 5
+  waypoints:
+  - {fileID: 0}
+  waitTime: 2
+--- !u!114 &1117617208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117617205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
+  npcName: Franklin
+  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
+  playerName: Detective Francesca
+  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
+  lines:
+  - speaker: 1
+    text: ' I''m told the extension went through.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: Talk_To_Franklin1
+  - speaker: 0
+    text: It did. The system accepted the evidence. I know I was sent to close the
+      file, sir, but closing it without checking Frank's work would be careless
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: You always did take that word personally. The Bureau knew Frank was looking
+      outside his assigned cases. Near the end he wasn't discreet about it.
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'Then why isn''t it in the preliminary report? It bears on his state of
+      mind and on his work.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' It bears on both. It isn''t evidence of a connection. He''d always been
+      obsessive. You know that. If there was a discrepancy in a report, Frank would
+      sit with it until he''d convinced himself he''d found the reason. That''s part
+      of what made him good. But there came a point where the discrepancy itself
+      became proof to him that something was wrong. Eventually, every perceived link
+      between evidence became a conspiracy. He most likely made some groundless link
+      between cases and chased it.'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' I know what he was like. I also know he never started a comparison without
+      a reason.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: No. He didn't. And in the last months he wasn't sleeping, he missed appointments,
+      he was frightened by things he'd once have dismissed. People in this office
+      saw it. Maybe he saw a reason, but it might not be all that justifying.
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'I''m not disputing that he was unwell. I''m saying it shouldn''t answer
+      every question for us.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'Of course. I understand the need to see this through.
+
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' When did you last speak to him?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'Earlier that week. In the corridor. I asked if he was sleeping. He said
+      yes. I should''ve pushed more. If you find something that contradicts the official
+      record, bring it to me. That''s the protocol, and I''ll go through it with
+      you.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'I''d appreciate that, sir. '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' And Frankcesca. Don''t turn being thorough into a way of punishing yourself
+      for not being able to tell that he''d do what he did.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  endsWithChoice: 0
+  choicePrompt: What do you do?
+  optionA:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+  optionB:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+--- !u!136 &1117617209
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117617205}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33558655
+  m_Height: 1.9490166
+  m_Direction: 1
+  m_Center: {x: 0.008224487, y: 0.8773885, z: 0}
+--- !u!95 &1117617210 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 581885465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1119544362
 Mesh:
   m_ObjectHideFlags: 0
@@ -227133,7 +226517,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -230606,7 +229990,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -237207,6 +236591,100 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1001 &1190541367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113609853}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9169497
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5099562
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9886613
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.49
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.6152205
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.84
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Name
+      value: Ingrid2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 95b868b2c5a9d7a4f81a3247b89b3a66, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275350343981809539, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664683503}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664683502}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664683501}
+  m_SourcePrefab: {fileID: 100100000, guid: 587b22c94d3704b48971a874868971b4, type: 3}
 --- !u!1001 &1193257531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239165,7 +238643,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -244521,102 +243999,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1001 &1249382983
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1113609853}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5324
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3484
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4131
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.233566
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.01522
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.16497
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_Name
-      value: FRANKLIN2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8275350343981809539, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369273}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369276}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369280}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369279}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369278}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1389369281}
-  m_SourcePrefab: {fileID: 100100000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
---- !u!4 &1249382984 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1249382983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249966636
 GameObject:
   m_ObjectHideFlags: 0
@@ -246243,6 +245625,188 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0315144, y: 1.932416, z: 1.9957075}
   m_Center: {x: -0.123583466, y: 0.2883613, z: -0.3201189}
+--- !u!1 &1255974215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 226093825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1255974216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 226093825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1255974217 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 226093825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1255974218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255974215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
+  npcName: Franklin
+  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
+  playerName: Detective Francesca
+  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
+  lines:
+  - speaker: 1
+    text: Come in. Sit. I poured yours a while ago, so it'll be cold.
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' You knew all along, didn''t you.'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'Yes. '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'This entire investigation, I assumed I''d misunderstood something. A date.
+      A field. I kept looking for the version where I was wrong. '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'I know. It''s the best thing about you. I never wanted to be the one who
+      proved it wasn''t always right. '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' Frank Clifford was murdered. You murdered him.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' Frank Clifford was contained. (Pause) I''ve had days to find a better
+      word, and there isn''t one that''s both honest and bearable. I put my hands
+      on nothing. I gave the word. Someone else typed.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'Ask me what the programme is for. Not Frank''s four. The others.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'How many are there?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: Of every ten thousand people we steer, roughly six do not take well to
+      the intervention. Six. And the other nine thousand nine hundred and ninety-four
+      live the rest of their lives safer than they ever would have. Frank told me
+      on that night that eight percent is nothing, unless there are ten thousand
+      people. It wasn't even eight - it was less than one percent. He had the argument
+      exactly right even if his stats were inflated. Any death is a loss to us, Frankcesca,
+      but you have to be realistic and see the other nine thousand nine hundred and
+      ninety-four.
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: "You spoke to him before he died? That\u2019s\u2026 Has my implant ever
+      been..?"
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: '(silence)
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: 'Answer the question.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'If I say no, you won''t believe me. If I say yes, you''ll never stop checking
+      the clock.  '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: "You think you're choosing between the truth and a lie. You aren't. You're
+      choosing which harm you're willing to answer for: a few you can name, or the
+      thousands you'll never meet when this city turns against itself. I'm not going
+      to stop you from making your choice - whatever it might be. You're a remarkable
+      young woman, Frankcesca. Don't forget that.\r\n "
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: "SIGN AND CLOSE THE CASE\r\n\r\nOr\r\n\r\nRELEASE EXTERNALLY: \r\n "
+    voiceClip: {fileID: 0}
+    clueId: 
+  endsWithChoice: 1
+  choicePrompt: What do you do with the evidence?
+  optionA:
+    label: 'Expose
+
+'
+    endingId: 
+    sceneName: MainMenu
+    endingVideo: {fileID: 0}
+  optionB:
+    label: ' Destroy
+
+'
+    endingId: 
+    sceneName: MainMenu
+    endingVideo: {fileID: 0}
+--- !u!114 &1255974219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255974215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78fe2688537f6e4da77047dd921e4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimator
+  animator: {fileID: 1255974217}
+  smoothing: 10
+  randomiseIdleStart: 1
+  turnSpeed: 5
+  waypoints: []
+  waitTime: 2
+--- !u!136 &1255974220
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255974215}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.48182282
+  m_Height: 2.5642855
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6032997, z: -0.02238527}
 --- !u!43 &1256425161
 Mesh:
   m_ObjectHideFlags: 0
@@ -269118,7 +268682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -45.932007, y: -65.42029}
+  m_AnchoredPosition: {x: -45.93213, y: -65.42029}
   m_SizeDelta: {x: -272.14, y: -714.8995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381914908
@@ -273752,249 +273316,6 @@ Transform:
   - {fileID: 510535793}
   m_Father: {fileID: 1084261900}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1389369272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_PrefabInstance: {fileID: 1249382983}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1389369273
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-  m_Controller: {fileID: 9100000, guid: 264522ebbe6b18b47ae6af12315e4fb7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!136 &1389369276
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.3459704
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.6729852, z: 0}
---- !u!114 &1389369278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244fdd8fff586fb419f74732a8c901e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcWaypointWalker
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  pathMode: 1
-  waitAtWaypoint: 2
-  walkSpeed: 1.4
-  player: {fileID: 1895196510}
-  stopDistance: 4
-  turnSpeed: 5
-  animator: {fileID: 1389369273}
-  speedParameter: 
-  speedDamping: 0.1
---- !u!195 &1389369279
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1389369280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b33f110f81975468d4576fb1fa36e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NpcAnimation
-  player: {fileID: 1895196510}
-  talkDistance: 4
-  animator: {fileID: 0}
-  idleState: Idle 2
-  walkState: Walk
-  talkState: Shrug
-  crossFadeSeconds: 0.2
-  walkSpeedThreshold: 0.1
---- !u!114 &1389369281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389369272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
-  npcName: Franklin
-  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
-  playerName: Detective Francesca
-  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
-  lines:
-  - speaker: 1
-    text: Come in. Sit. I poured yours a while ago, so it'll be cold.
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: ' You knew all along, didn''t you.'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Yes. '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'This entire investigation, I assumed I''d misunderstood something. A date.
-      A field. I kept looking for the version where I was wrong. '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'I know. It''s the best thing about you. I never wanted to be the one who
-      proved it wasn''t always right. '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Frank Clifford was murdered. You murdered him.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: ' Frank Clifford was contained. (Pause) I''ve had days to find a better
-      word, and there isn''t one that''s both honest and bearable. I put my hands
-      on nothing. I gave the word. Someone else typed.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'Ask me what the programme is for. Not Frank''s four. The others.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'How many are there?
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: Of every ten thousand people we steer, roughly six do not take well to
-      the intervention. Six. And the other nine thousand nine hundred and ninety-four
-      live the rest of their lives safer than they ever would have. Frank told me
-      on that night that eight percent is nothing, unless there are ten thousand
-      people. It wasn't even eight - it was less than one percent. He had the argument
-      exactly right even if his stats were inflated. Any death is a loss to us, Frankcesca,
-      but you have to be realistic and see the other nine thousand nine hundred and
-      ninety-four.
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: "You spoke to him before he died? That\u2019s\u2026 Has my implant ever
-      been..?"
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: '(silence)
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 0
-    text: 'Answer the question.
-
-'
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: 'If I say no, you won''t believe me. If I say yes, you''ll never stop checking
-      the clock.  '
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: "You think you're choosing between the truth and a lie. You aren't. You're
-      choosing which harm you're willing to answer for: a few you can name, or the
-      thousands you'll never meet when this city turns against itself. I'm not going
-      to stop you from making your choice - whatever it might be. You're a remarkable
-      young woman, Frankcesca. Don't forget that.\r\n "
-    voiceClip: {fileID: 0}
-    clueId: 
-  - speaker: 1
-    text: "SIGN AND CLOSE THE CASE\r\n\r\nOr\r\n\r\nRELEASE EXTERNALLY: \r\n "
-    voiceClip: {fileID: 0}
-    clueId: 
-  endsWithChoice: 1
-  choicePrompt: What do you do with the evidence?
-  optionA:
-    label: 'Expose
-
-'
-    endingId: 
-    sceneName: MainMenu
-    endingVideo: {fileID: 0}
-  optionB:
-    label: ' Destroy
-
-'
-    endingId: 
-    sceneName: MainMenu
-    endingVideo: {fileID: 0}
 --- !u!1 &1390046758
 GameObject:
   m_ObjectHideFlags: 0
@@ -276906,6 +276227,148 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409307825}
   m_CullTransparentMesh: 1
+--- !u!1 &1411760511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+  m_PrefabInstance: {fileID: 2106128718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1411760512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411760511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
+  npcName: Forensic officer Vivek Menon
+  npcPortrait: {fileID: 21300000, guid: 12a7c96c24e242f4195844f003ab19f4, type: 3}
+  playerName: Detective Francesca
+  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
+  lines:
+  - speaker: 1
+    text: ' You''re the Bureau investigator?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Frankcesca Clark. I assume you''re Menon? What have you found? '
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'Not much, Frank Clifford''s been dead fifteen, sixteen hours. Between
+      seven and eight last night, sixteenth October. No forced entry, no defensive
+      injuries, no struggle. The implant killed him.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: Time_Of_Death
+  - speaker: 0
+    text: 'He accessed it himself?
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: 'The maintenance interface was opened locally. Safeguards disabled, then
+      the implant overloaded. A neural shutdown.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: Evidence_Of_Suspicious_Activity
+  - speaker: 0
+    text: ' How long between those two steps?'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' Seconds. People who''ve decided don''t hesitate.'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Anyone else involved?'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 1
+    text: ' His own key on the door log at 17:52, nothing after. No visitors recorded,
+      no unusual network activity. Everything points the same direction.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Suicide.'
+    voiceClip: {fileID: 0}
+    clueId: Cause_Of_Death
+  - speaker: 1
+    text: 'That''s the assessment. You can look again. I wouldn''t expect surprises.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  endsWithChoice: 0
+  choicePrompt: What do you do?
+  optionA:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+  optionB:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+--- !u!136 &1411760513
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411760511}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.89612186
+  m_Height: 5.981219
+  m_Direction: 1
+  m_Center: {x: 0.00062552874, y: 2.3177948, z: -0.087238066}
+--- !u!95 &1411760514 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+  m_PrefabInstance: {fileID: 2106128718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1411760515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+  m_PrefabInstance: {fileID: 2106128718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1411760516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411760511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0718681a4ac82e14d9d3a6b0215915ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForensicOfficer
+  animator: {fileID: 1411760514}
+  smoothing: 10
+  turnSpeed: 5
 --- !u!43 &1412815309
 Mesh:
   m_ObjectHideFlags: 0
@@ -315418,101 +314881,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1001 &1598211363
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1113609853}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7925754
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2705852
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4964
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.4736023
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.87522
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.975029
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_Name
-      value: Ingrid 2 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8275350343981809539, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650732}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650731}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650730}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650729}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650728}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 726650727}
-  m_SourcePrefab: {fileID: 100100000, guid: 5a5a1531fc4f1a744a06876c4b8d9437, type: 3}
 --- !u!43 &1603948325
 Mesh:
   m_ObjectHideFlags: 0
@@ -328621,6 +327989,111 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1664683499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 1190541367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1664683500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 1190541367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664683501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664683499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78fe2688537f6e4da77047dd921e4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimator
+  animator: {fileID: 1664683504}
+  smoothing: 10
+  randomiseIdleStart: 1
+  turnSpeed: 5
+  waypoints: []
+  waitTime: 2
+--- !u!114 &1664683502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664683499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea768deea00c4ad4ea64024f2e793b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInteractable
+  npcName: Detective Ingrid
+  npcPortrait: {fileID: 21300000, guid: db87fa9e0f9e44e4fadd17e2b02d5da3, type: 3}
+  playerName: Detective Francesca
+  playerPortrait: {fileID: 21300000, guid: 154586e1ea002854fa664747d4d4f9d7, type: 3}
+  lines:
+  - speaker: 0
+    text: ' Ingrid, you said a while ago that Frank kept old case materials in a
+      locker.'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' He thought a record was worth keeping if the reason it mattered hadn''t
+      been written down yet. I have the code. I''ll give it to you'
+    voiceClip: {fileID: 0}
+    clueId: 
+  - speaker: 0
+    text: ' Thank you'
+    voiceClip: {fileID: 0}
+    clueId: Talk_to_Ingrid2
+  - speaker: 1
+    text: 'The code is 0744. Remember to take breaks, dearie.
+
+'
+    voiceClip: {fileID: 0}
+    clueId: 
+  endsWithChoice: 0
+  choicePrompt: What do you do?
+  optionA:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+  optionB:
+    label: Option
+    endingId: 
+    sceneName: Credits
+    endingVideo: {fileID: 0}
+--- !u!136 &1664683503
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664683499}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.38230896
+  m_Height: 2.2826617
+  m_Direction: 1
+  m_Center: {x: -0.049972534, y: 0.64133084, z: 0}
+--- !u!95 &1664683504 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+  m_PrefabInstance: {fileID: 1190541367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1664809059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98e89532b72cc334d877726d2173392d, type: 3}
@@ -377676,7 +377149,7 @@ GameObject:
   - component: {fileID: 1895196511}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377909,7 +377382,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895196501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -377968,12 +377441,13 @@ Transform:
   m_GameObject: {fileID: 1895196501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.01977916, z: -0, w: 0.9998044}
-  m_LocalPosition: {x: -4.5, y: 1.3752, z: 28.1}
+  m_LocalPosition: {x: -12.24, y: 1.3752, z: 39.62}
   m_LocalScale: {x: 1.4055841, y: 1.211136, z: 1.4961}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330585546}
   - {fileID: 605332096}
+  - {fileID: 551184655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -2.267, z: 0}
 --- !u!114 &1895196508
@@ -422653,7 +422127,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -424320,6 +423794,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1024282996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2105175734
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1895196506}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Name
+      value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a225a62743d0e9d4385a0e240c0adeaf, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275350343981809539, guid: 587b22c94d3704b48971a874868971b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 97baeeeea343f2446aaee17c721df100, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 587b22c94d3704b48971a874868971b4, type: 3}
 --- !u!1 &2105870460
 GameObject:
   m_ObjectHideFlags: 0
@@ -425197,6 +424740,92 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1001 &2106128718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113609853}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66777
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5050361
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.67959
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -306.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.599898
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.54111814
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8409466
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -114.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -516023920610315970, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0584c59157623df4f86b66b7c095f620, type: 2}
+    - target: {fileID: 919132149155446097, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_Name
+      value: Forensic Officer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f4eb67af2ecdb1c4b92eebd8a9067ed1, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411760513}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411760512}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411760516}
+  m_SourcePrefab: {fileID: 100100000, guid: d7e0931fb5aaa8d48bcc1237d87a4a66, type: 3}
 --- !u!1 &2107073457
 GameObject:
   m_ObjectHideFlags: 0
@@ -426059,7 +425688,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 416026533}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -426088,7 +425717,7 @@ MonoBehaviour:
     onActComplete:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 824332885}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -426133,7 +425762,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1080461853}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -426157,7 +425786,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 726650725}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -426227,7 +425856,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 726650725}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
