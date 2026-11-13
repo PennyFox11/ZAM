@@ -16,6 +16,10 @@ public class DialogueUI : MonoBehaviour, IInteractionScreen
     // Lets any NPC find the dialogue box with DialogueUI.Instance.
     public static DialogueUI Instance { get; private set; }
 
+    // Other scripts (NPC animators) listen to these to know when a conversation starts and ends.
+    public static event System.Action<DialogueInteractable> DialogueStarted;
+    public static event System.Action<DialogueInteractable> DialogueEnded;
+
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TMP_Text speakerText;
@@ -107,6 +111,7 @@ public class DialogueUI : MonoBehaviour, IInteractionScreen
         isChoosing = false;
 
         dialoguePanel.SetActive(true);
+        DialogueStarted?.Invoke(npc);
 
         // Set both portraits once. A missing portrait is simply hidden.
         SetPortrait(playerPortraitImage, npc.playerPortrait);
@@ -334,6 +339,8 @@ public class DialogueUI : MonoBehaviour, IInteractionScreen
 
     private void FinishAndRelease()
     {
+        DialogueEnded?.Invoke(currentNPC);
+
         StopTypingSound();
         StopVoice();
         dialoguePanel.SetActive(false);
