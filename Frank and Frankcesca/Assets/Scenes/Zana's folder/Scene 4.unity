@@ -26118,13 +26118,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101160888}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70078325, z: -0, w: 0.7133743}
-  m_LocalPosition: {x: 4.44, y: 0, z: -9.84}
+  m_LocalRotation: {x: -0, y: -0.7095199, z: -0, w: 0.70468545}
+  m_LocalPosition: {x: 4.4400024, y: 0, z: -9.84}
   m_LocalScale: {x: 2.254123, y: 0.8188, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1409248142}
-  m_LocalEulerAnglesHint: {x: 0, y: -88.98, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.392, z: 0}
 --- !u!64 &101160890
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -148499,7 +148499,7 @@ GameObject:
   - component: {fileID: 787981354}
   - component: {fileID: 787981353}
   m_Layer: 0
-  m_Name: 'Frankcesca PC '
+  m_Name: 'Office PC '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202066,13 +202066,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982964722}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.49969923, y: -0.49969923, z: 0.50030065, w: 0.50030065}
-  m_LocalPosition: {x: 0.8561376, y: -2.3318543, z: 5.152624}
+  m_LocalRotation: {x: 0.0029839086, y: 0.0029841214, z: -0.70710063, w: -0.70710045}
+  m_LocalPosition: {x: 0.8548134, y: -2.3318543, z: 5.1578875}
   m_LocalScale: {x: 1, y: 0.92106456, z: 0.92319036}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 990532819}
-  m_LocalEulerAnglesHint: {x: 0, y: -89.931, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -360.484, z: 90}
 --- !u!1 &987528559
 GameObject:
   m_ObjectHideFlags: 0
@@ -252703,13 +252703,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228239864}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -16.327385, y: -2.2288544, z: 5.485775}
+  m_LocalRotation: {x: -0.49813458, y: -0.49813473, z: 0.50185835, w: 0.50185853}
+  m_LocalPosition: {x: -16.327427, y: -2.2288544, z: 5.4860525}
   m_LocalScale: {x: 1, y: 0.9231906, z: 0.92106473}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 990532819}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.573, z: 90}
 --- !u!1 &1229562738
 GameObject:
   m_ObjectHideFlags: 0
@@ -253580,13 +253580,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234636614}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.4996992, y: -0.4996992, z: 0.5003006, w: 0.5003006}
-  m_LocalPosition: {x: 274.2733, y: 0.68499994, z: 48.749195}
+  m_LocalRotation: {x: 0.0029838718, y: 0.0029841661, z: -0.7071002, w: -0.7071008}
+  m_LocalPosition: {x: 274.27908, y: 0.68499994, z: 48.74624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -89.931, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -360.484, z: 90}
 --- !u!1 &1236820521
 GameObject:
   m_ObjectHideFlags: 0
@@ -274581,7 +274581,7 @@ GameObject:
   - component: {fileID: 1357969050}
   - component: {fileID: 1357969049}
   m_Layer: 0
-  m_Name: Frankcesca PC (1)
+  m_Name: 'Frankcesca PC '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280044,7 +280044,7 @@ GameObject:
   - component: {fileID: 1388309978}
   - component: {fileID: 1388309977}
   m_Layer: 0
-  m_Name: Frank PC (1)
+  m_Name: 'Office PC '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355925,7 +355925,7 @@ GameObject:
   - component: {fileID: 1709127320}
   - component: {fileID: 1709127319}
   m_Layer: 0
-  m_Name: Frank PC
+  m_Name: Office PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365064,7 +365064,7 @@ GameObject:
   - component: {fileID: 1761489820}
   - component: {fileID: 1761489819}
   m_Layer: 0
-  m_Name: Frank safe door
+  m_Name: Employee safe door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365249,13 +365249,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761489818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 255.668, y: 0.685, z: 49.103}
+  m_LocalRotation: {x: -0.49813458, y: -0.49813473, z: 0.50185835, w: 0.50185853}
+  m_LocalPosition: {x: 255.65948, y: 0.795, z: 49.102215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.573, z: 90}
 --- !u!1 &1762357411
 GameObject:
   m_ObjectHideFlags: 0
