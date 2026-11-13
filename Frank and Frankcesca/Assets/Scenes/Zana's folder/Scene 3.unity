@@ -1890,7 +1890,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 826640992}
+  m_Mesh: {fileID: 2127566493}
 --- !u!33 &19239668
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -22158,7 +22158,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2127566493}
+  m_Mesh: {fileID: 883183152}
 --- !u!33 &84030634
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -45348,10 +45348,12 @@ MonoBehaviour:
     label: 
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!136 &260097600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -53020,7 +53022,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 215782599}
+  m_Mesh: {fileID: 1614942432}
 --- !u!33 &290920970
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -53474,6 +53476,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -58889,6 +58892,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -61440,6 +61444,13 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints:
+  - icon: {fileID: 21300000, guid: 41a68c41e877f9a42935195c2ffccecf, type: 3}
+    label: SCROLL TO FLIP
+  - icon: {fileID: 21300000, guid: dff918ccb3a9af14f84f2a0eec14dcbf, type: 3}
+    label: CALL MAAM
+  - icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    label: CHECKMATE
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -61458,13 +61469,6 @@ MonoBehaviour:
   openScale: 2
   autoFitCollider: 1
   worldModel: {fileID: 318159102}
-  controlHints:
-  - icon: {fileID: 21300000, guid: 41a68c41e877f9a42935195c2ffccecf, type: 3}
-    label: SCROLL TO FLIP
-  - icon: {fileID: 21300000, guid: dff918ccb3a9af14f84f2a0eec14dcbf, type: 3}
-    label: CALL MAAM
-  - icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-    label: CHECKMATE
   openSeconds: 0.5
   flipSeconds: 0.45
   curve:
@@ -75869,10 +75873,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!114 &416026536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76196,7 +76202,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 719045128}
+  m_Mesh: {fileID: 1129440257}
 --- !u!33 &421452163
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -98574,6 +98580,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -128783,6 +128790,7 @@ MonoBehaviour:
   openClip: {fileID: 0}
   wrongClip: {fileID: 0}
   successClip: {fileID: 0}
+  controlHints: []
 --- !u!114 &699273225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129909,7 +129917,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1129440257}
+  m_Mesh: {fileID: 2054555918}
 --- !u!33 &711816072
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -130498,10 +130506,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!114 &726650728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132726,6 +132736,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -139180,7 +139191,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 82687758}
+  m_Mesh: {fileID: 703470204}
 --- !u!33 &788628252
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -144495,10 +144506,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!23 &824332887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -169723,7 +169736,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 554708268}
+  m_Mesh: {fileID: 1594532717}
 --- !u!33 &891519014
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -188915,7 +188928,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1415464886}
+  m_Mesh: {fileID: 82687758}
 --- !u!33 &975655096
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -208614,6 +208627,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -211972,10 +211986,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!1 &1080844988
 GameObject:
   m_ObjectHideFlags: 0
@@ -216786,6 +216802,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 1
   playClipOnlyOnce: 1
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -236488,6 +236505,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -241152,7 +241170,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1595830050}
+  m_Mesh: {fileID: 744367628}
 --- !u!33 &1217573521
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -241511,6 +241529,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -242613,7 +242632,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1614942432}
+  m_Mesh: {fileID: 1075521673}
 --- !u!33 &1229562741
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -244663,7 +244682,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1322680893}
+  m_Mesh: {fileID: 1046695447}
 --- !u!33 &1249966639
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -246766,6 +246785,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -273967,12 +273987,14 @@ MonoBehaviour:
 '
     endingId: 
     sceneName: MainMenu
+    endingVideo: {fileID: 0}
   optionB:
     label: ' Destroy
 
 '
     endingId: 
     sceneName: MainMenu
+    endingVideo: {fileID: 0}
 --- !u!1 &1390046758
 GameObject:
   m_ObjectHideFlags: 0
@@ -274029,7 +274051,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 703470204}
+  m_Mesh: {fileID: 1367711636}
 --- !u!33 &1390046761
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -274906,7 +274928,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1406212352}
+  m_Mesh: {fileID: 179688700}
 --- !u!33 &1392244266
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -278109,6 +278131,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -280543,7 +280566,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 744367628}
+  m_Mesh: {fileID: 1322680893}
 --- !u!33 &1438929487
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -305499,6 +305522,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -305732,6 +305756,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -319331,10 +319356,12 @@ MonoBehaviour:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
   optionB:
     label: Option
     endingId: 
     sceneName: Credits
+    endingVideo: {fileID: 0}
 --- !u!1 &1618237522
 GameObject:
   m_ObjectHideFlags: 0
@@ -319391,7 +319418,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 165097709}
+  m_Mesh: {fileID: 1406212352}
 --- !u!33 &1618237525
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -320259,6 +320286,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -350567,6 +350595,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -376304,6 +376333,7 @@ MonoBehaviour:
   pickupClipVolume: 1
   stopClipWhenDropped: 0
   playClipOnlyOnce: 0
+  controlHints: []
   onPickedUp:
     m_PersistentCalls:
       m_Calls: []
@@ -376806,7 +376836,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1011397989}
+  m_Mesh: {fileID: 554708268}
 --- !u!33 &1895118489
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -378052,6 +378082,7 @@ MonoBehaviour:
   loopClip: {fileID: 8300000, guid: 64025245cd7778a42b25379cf9ca3984, type: 3}
   toggleOffClip: {fileID: 8300000, guid: e7947cad9b2088045b4682e000bf688b, type: 3}
   volume: 0.555
+  controlHints: []
 --- !u!1 &1898374844
 GameObject:
   m_ObjectHideFlags: 0
@@ -387803,7 +387834,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1201813493}
+  m_Mesh: {fileID: 826640992}
 --- !u!33 &1914620418
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -388793,7 +388824,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1090367404}
+  m_Mesh: {fileID: 1011397989}
 --- !u!33 &1916575220
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -406290,7 +406321,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 2054555918}
+  m_Mesh: {fileID: 565450329}
 --- !u!33 &1999737604
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -424345,7 +424376,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 869377496}
+  m_Mesh: {fileID: 165097709}
 --- !u!33 &2105870463
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -425922,6 +425953,7 @@ MonoBehaviour:
   openClip: {fileID: 8300000, guid: c20ad1bb81618d543a4a33249eba0c22, type: 3}
   closeClip: {fileID: 8300000, guid: c20ad1bb81618d543a4a33249eba0c22, type: 3}
   newClueClip: {fileID: 8300000, guid: ef215c90b564b604290c9a72ec0e9cc1, type: 3}
+  controlHints: []
 --- !u!114 &2115174684
 MonoBehaviour:
   m_ObjectHideFlags: 0
